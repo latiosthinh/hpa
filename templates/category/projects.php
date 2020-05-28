@@ -14,8 +14,11 @@ get_header();
 			</div>
 
 			<div class="item-content">
-				<h2><?php the_title(); ?> - 2020</h2>
-				<a href="<?php the_permalink() ?>">view project</a>
+				<div class="item-content__bg"></div>
+				<div class="item-content__text">
+					<h2><?php the_title(); ?> - 2020</h2>
+					<a href="<?php the_permalink() ?>">view project</a>
+				</div>
 			</div>
 		</div>
 	<?php endwhile; ?>

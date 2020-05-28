@@ -1423,6 +1423,24 @@ footer ion-icon {
 	cursor: move;
 }
 
+#projects .item:hover .item-content {
+	opacity: 1;
+}
+
+#projects .item:hover .item-content__bg {
+	width: 100%;
+}
+
+#projects .item:hover .item-content h2 {
+	transform: translateY(0);
+	opacity: 1;
+}
+
+#projects .item:hover .item-content a {
+	transform: translateY(0);
+	opacity: 1;
+}
+
 #projects .item-parallax {
 	position: absolute;
 	top: 0;
@@ -1445,7 +1463,7 @@ footer ion-icon {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background: rgba(0, 0, 0, 0.8);
+	background: rgba(0, 0, 0, 0.6);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -1454,21 +1472,44 @@ footer ion-icon {
 	transition: .2s;
 }
 
-#projects .item-content:hover {
-	opacity: 1;
-}
-
 #projects .item-content h2 {
 	margin: 0;
+	transform: translateY(10px);
+	opacity: 0;
+	transition-delay: .5s;
+	transition-duration: 0.3s;
 }
 
 #projects .item-content a {
 	display: block;
-	margin-top: 20px;
+	margin-top: 5px;
 	font-weight: 300;
 	color: #0bff0c;
+	transform: translateY(-10px);
+	opacity: 0;
+	transition-delay: 0.5s;
+	transition-duration: 0.3s;
 }
 
 #projects .item-content a:hover {
 	text-decoration: underline;
+}
+
+#projects .item-content__text {
+	position: relative;
+	z-index: 3;
+	text-align: center;
+}
+
+#projects .item-content__bg {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: rgba(0, 0, 0, 0.8);
+	transition-duration: .3s;
+	transition-delay: 0.15s;
+	z-index: 0;
+	width: 0;
+	height: 100px;
 }
