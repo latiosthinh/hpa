@@ -1,0 +1,21 @@
+@font-face {
+    font-family: iCiel;
+    src: url(fonts/iCielGTAmerica-Medium.otf) format("opentype");
+}
+
+@font-face {
+    font-family: iCiel;
+    src: url(fonts/iCielGTAmerica-UltraLightExpanded.otf) format("opentype");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Europa;
+    src: url(fonts/Europa-Bold.woff) format("woff");
+}
+
+$font-iciel: 'iCiel', sans-serif;
+$font-euro: 'Europa', sans-serif;
+
+$f1: $font-iciel;
+$f2: $font-euro;

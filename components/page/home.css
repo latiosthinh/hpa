@@ -1,0 +1,95 @@
+.home .loading {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #fff;
+	z-index: 25;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	cursor: pointer;
+}
+
+.home .loading h1 {
+	color: #000000;
+	font-size: 57px;
+}
+
+.home svg {
+	width: 400px;
+}
+
+.banner {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+}
+
+.banner-slider {
+	width: 80%;
+	max-height: 500px;
+	cursor: none;
+}
+
+.banner-slider .slick-list {
+	height: 100%;
+}
+
+.banner-slider .slick-track {
+	height: 100%;
+	transition: all 1s cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.banner-slider .slick-slide {
+	height: 100%;
+}
+
+.banner-slider .slick-slide div {
+	height: 100%;
+}
+
+.banner-slider .slick-slide img {
+	width: 100%;
+	height: 100%;
+	transition: all 1s cubic-bezier(0.7, 0, 0.3, 1);
+	transform: scale(1.2);
+}
+
+.banner-slider .slick-slide.slick-active img {
+	transform: scale(1);
+}
+
+.banner-slider .item {
+	position: relative;
+	cursor: none;
+}
+
+.banner-slider .item h2 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #ffffff;
+	text-transform: uppercase;
+	transform: translate3d(-50%, -50%, 0);
+	transition: transform 0.2s cubic-bezier(0.02, 1.23, 0.79, 1.08);
+	display: none;
+}
+
+.banner-slider .item h2.active {
+	display: block;
+}
+
+.banner-slider .item h2 ion-icon {
+	margin: -3px 5px;
+	padding-top: 5px;
+	color: #ffffff;
+}

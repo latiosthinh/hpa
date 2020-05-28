@@ -1,0 +1,26 @@
+/*!
+Theme Name: hpa
+Theme URI: 
+Author: NovusVN
+Author URI: 
+Description: Description
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: hpa
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+*/
+
+@import "base/normalize";
+@import "base/grid";
+@import "base/fonts";
+@import "base/vars";
+@import "base/mixin";
+@import "base/elements";
+@import "base/utilities";
+
+@import "components/common/header.scss";
+@import "components/common/footer.scss";
+
+@import "components/page/home.scss";
+@import "components/page/category.scss";

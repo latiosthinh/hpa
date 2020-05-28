@@ -1,0 +1,119 @@
+.screen-reader-text {
+    display: none;
+}
+
+
+.menu-toggle {
+    display: none;
+}
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    background: #000000;
+    padding: 10px 50px;
+}
+
+.site-branding {
+    display: flex;
+
+    .heading {
+        display: flex;
+        overflow: hidden;
+        transition: .3s;
+        overflow: hidden;
+        margin-right: 5px;
+
+        &:nth-child(2) {
+            .heading-expand {
+                padding-left: 2px;
+            }
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            opacity: 0;
+
+            &.active {
+                opacity: 1;
+            }
+        }
+    }
+
+    .heading-expand {
+        font-size: 50px;
+        line-height: 1;
+        font-family: $f2;
+        color: #ffffff;
+        cursor: pointer;
+        display: inline-block;
+        transition: .2s;
+
+        &.active, &:hover {
+            color: $green;
+        }
+    }
+
+    a {
+        color: #ffffff;
+        white-space: nowrap;
+
+        &.active {
+            color: $green;
+        }
+    }
+}
+
+.main-navigation {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    padding: 0;
+    background: #000000;
+    opacity: 0;
+    visibility: hidden;
+    transition: .2s;
+
+    div {
+        height: 100%;
+        padding: 15vh 0 20vh;
+    }
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    li {
+        width: 50%;
+        flex: 0 0 50%;
+    }
+    
+    a {
+        color: #ffffff;
+        font-size: 22px;
+        display: block;
+        transform: translate(-5%, 100%);
+        transition: .2s;
+        opacity: 0;
+
+        &:hover {
+            color: $green;
+        }
+    }
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+}

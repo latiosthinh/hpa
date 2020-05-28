@@ -1,0 +1,28 @@
+.screen-reader-text {
+	display: none;
+}
+
+.menu-toggle {
+	display: none;
+}
+
+.site-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 20;
+}
+
+.site-branding {
+	display: flex;
+}
+
+.site-branding .heading {
+	display: flex;
+}
+
+.site-branding .heading div {
+	display: flex;
+	flex-direction: column;
+}
