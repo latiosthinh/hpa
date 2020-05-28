@@ -11,8 +11,8 @@ get_header();
     <h1>H&P Architects</h1>
 </section> -->
 
-<section class="banner">
-    <div class="banner-slider">
+<section class="banner swiper-container">
+    <div class="banner-slider swiper-wrapper">
         <?php
         $args = [
             'post_type'      => 'post',
@@ -26,19 +26,26 @@ get_header();
             while ( $projects->have_posts() ) :
                 $projects->the_post();
         ?>
-            <a href="<?php the_permalink(); ?>" class="item">
-                <?php the_post_thumbnail( 'full' ) ?>
-                <h2>
-                    <ion-icon name="arrow-back"></ion-icon>
-                    <?php echo get_the_title(); ?>
-                    <ion-icon name="arrow-forward"></ion-icon>
-                </h2>
+            <a href="<?php the_permalink(); ?>" class="item swiper-slide">
+                <div class="image" style="background-image:url(<?php the_post_thumbnail_url( 'full' ) ?>)"></div>
+
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, ut.</p>
+                    <h2><?php echo get_the_title(); ?></h2>
+                    <span>/</span>
+                    <span>2020</span>
+                </div>
             </a>
         <?php
             endwhile;
         endif;
         ?>
     </div>
+
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    <div class="swiper-scrollbar"></div>
 </section>
 
 <?php

@@ -1,11 +1,11 @@
 @font-face {
-    font-family: iCiel;
-    src: url(fonts/iCielGTAmerica-Medium.otf) format("opentype");
+    font-family: Averta;
+    src: url(fonts/averta.woff2) format("woff2");
 }
 
 @font-face {
-    font-family: iCiel;
-    src: url(fonts/iCielGTAmerica-UltraLightExpanded.otf) format("opentype");
+    font-family: Decima;
+    src: url(fonts/decima.woff2) format("woff2");
     font-weight: 300;
 }
 
@@ -14,8 +14,8 @@
     src: url(fonts/Europa-Bold.woff) format("woff");
 }
 
-$font-iciel: 'iCiel', sans-serif;
-$font-euro: 'Europa', sans-serif;
+$font-averta: 'Averta', sans-serif;
+$font-decima: 'Decima', sans-serif;
 
-$f1: $font-iciel;
-$f2: $font-euro;
+$f1: $font-averta;
+$f2: $font-decima;

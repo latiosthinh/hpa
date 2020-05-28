@@ -27,19 +27,19 @@
             }, 500);
         } )
 
-        $('.banner-slider').on( 'mousemove', function( e ) {
-            $( this ).find( 'h2' ).removeClass( 'active' )
-            $( '.slick-active h2' ).addClass( 'active' )
+        // $('.banner-slider').on( 'mousemove', function( e ) {
+        //     $( this ).find( 'h2' ).removeClass( 'active' )
+        //     $( '.slick-active h2' ).addClass( 'active' )
 
-            let x = e.clientX;
-            let y = e.clientY;
-            let newposX = x - x/8;
-            let newposY = y - y/10;
+        //     let x = e.clientX;
+        //     let y = e.clientY;
+        //     let newposX = x - x/8;
+        //     let newposY = y - y/10;
 
-            $( '.slick-active h2' ).css( "transform", "translate3d( " + newposX + "px, " + newposY+"px, 0 )" );
-        } ).on( 'mouseleave', function() {
-            $( this ).find( 'h2' ).removeClass( 'active' )
-        } )
+        //     $( '.slick-active h2' ).css( "transform", "translate3d( " + newposX + "px, " + newposY+"px, 0 )" );
+        // } ).on( 'mouseleave', function() {
+        //     $( this ).find( 'h2' ).removeClass( 'active' )
+        // } )
     }
 
     $( document ).ready( function() {
@@ -56,7 +56,7 @@
             }, 0);
         } )
 
-        slider();
+        // slider();
     } )
 
     $( '.heading-expand' ).on( 'click', function() {
@@ -99,35 +99,35 @@
         }
     } )
 
-    var slider = function() {
-        if ( $('.banner-slider').length !== 0 ) {
-            $('.banner-slider').slick({
-                autoplay: true,
-                autoplaySpeed: 3000,
-                draggable: true,
-                arrows: false,
-                dots: false,
-                fade: true,
-                speed: 900,
-                infinite: true,
-                cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
-                touchThreshold: 100
-            })
-        }
+    // var slider = function() {
+    //     if ( $('.banner-slider').length !== 0 ) {
+    //         $('.banner-slider').slick({
+    //             autoplay: true,
+    //             autoplaySpeed: 3000,
+    //             draggable: true,
+    //             arrows: false,
+    //             dots: false,
+    //             fade: true,
+    //             speed: 900,
+    //             infinite: true,
+    //             cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
+    //             touchThreshold: 100
+    //         })
+    //     }
         
-        if ( $( '.projects-slider' ).length !== 0 ) {
-            $( '.projects-slider' ).slick( {
-                // infinite: false,
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                dots: false,
-                arrows: true,
-                speed: 2000,
-                prevArrow: '<span class="prev"><ion-icon name="arrow-back"></ion-icon></span>',
-                nextArrow: '<span class="prev"></span>',
-            } )
-        }
-    }
+    //     if ( $( '.projects-slider' ).length !== 0 ) {
+    //         $( '.projects-slider' ).slick( {
+    //             // infinite: false,
+    //             slidesToShow: 2,
+    //             slidesToScroll: 1,
+    //             dots: false,
+    //             arrows: true,
+    //             speed: 2000,
+    //             prevArrow: '<span class="prev"><ion-icon name="arrow-back"></ion-icon></span>',
+    //             nextArrow: '<span class="prev"></span>',
+    //         } )
+    //     }
+    // }
 
     // barba.init( {
     //     transitions: [{
@@ -140,4 +140,57 @@
     //         }
     //     }]
     // } );
+
+    // Cursor
+    const link = document.querySelectorAll('a');
+    const cursor = $('.cursor');
+
+    const hoverLink = function (e) {
+        cursor.addClass( 'cursor-link' )
+    };
+
+    const unHoverLink = function (e) {
+        cursor.removeClass( 'cursor-link' )
+    };
+
+    const editCursor = e => {
+        const { clientX: x, clientY: y } = e;
+        cursor.css( 'left', x + 'px' );
+        cursor.css( 'top', y + 'px' );
+    };
+
+    link.forEach(b => b.addEventListener('mousemove', hoverLink));
+    link.forEach(b => b.addEventListener('mouseleave', unHoverLink));
+    window.addEventListener( 'mousemove', editCursor );
+
+    // Slider
+    var mySwiper = new Swiper ('.swiper-container', {
+        // Optional parameters
+        // direction: 'vertical',
+        loop: true,
+    
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+
+        parallax: true,
+        speed: 1000,
+
+        on: {
+            init: function() {
+                let swiper = this;
+                for ( let i=0; i<swiper.slides.length; i++ ) {
+                    $( swiper.slides[i] ).find( '.image' ).attr( {
+                        'data-swiper-parallax': 0.2 * swiper.width,
+                        'data-swiper-parallax-opacity': 0,
+                    } )
+                }
+            }
+        }
+    })
 } )( jQuery )

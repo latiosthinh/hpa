@@ -26,7 +26,9 @@
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'hpa' ); ?></a>
-
+	<div class="cursor">
+		<div class="cursor-link"></div>
+	</div>
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
 			<div class="heading" data-width="33px">
