@@ -1,8 +1,21 @@
+.pad-0 {
+	padding: 0;
+}
+
 @keyframes toRight {
 	0% {
 		transform: translate(-20%, -10%);
 	}
 	100% {
 		transform: translate(0, 0);
+	}
+}
+
+@keyframes toTop {
+	0%, 100% {
+		transform: translateY(-10px);
+	}
+	50% {
+		transform: translateY(10px);
 	}
 }

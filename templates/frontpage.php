@@ -26,16 +26,22 @@ get_header();
             while ( $projects->have_posts() ) :
                 $projects->the_post();
         ?>
-            <a href="<?php the_permalink(); ?>" class="item swiper-slide">
-                <div class="image" style="background-image:url(<?php the_post_thumbnail_url( 'full' ) ?>)"></div>
+            <div class="item swiper-slide">
+                <a href="<?php the_permalink(); ?>" class="image">
+                    <?php the_post_thumbnail( 'full' ) ?>
+                </a>
 
                 <div class="content">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, ut.</p>
-                    <h2><?php echo get_the_title(); ?></h2>
+                    <h2>
+                        <a href="<?php the_permalink(); ?>">
+                            <?php echo get_the_title(); ?>
+                        </a>
+                    </h2>
                     <span>/</span>
                     <span>2020</span>
                 </div>
-            </a>
+            </div>
         <?php
             endwhile;
         endif;

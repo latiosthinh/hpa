@@ -3,129 +3,135 @@
         color: $green;
     }
 }
-#projects {
-    padding-left: 50px;
+
+.archive-header {
     position: relative;
 
-    .projects-slider {
-        margin-top: 25vh;
+    h2 {
+        font-size: 60px;
+    }
+    p {
+        margin: 10px 0 80px;
+        color: $grey;
+        font-size: 18px;
     }
 
-    .slick-arrow {
+    ion-icon {
         position: absolute;
-        top: -30px;
-        font-size: 25px;
-        cursor: pointer;
+        font-size: 30px;
+        color: #ffffff;
+        bottom: 10px;
+        right: 5%;
+        animation: toTop 2s linear infinite;
     }
+}
 
-    .slick-list {
-        margin: 0 -30px;
-    }
-
-    .slick-slide {
-        padding: 0 30px;
-        > div {
-            overflow: hidden;
-        }
-    }
+#projects {
+    margin-top: 25vh;
     
+    .projects {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 100px;
+    }
+
     .item {
         position: relative;
-        display: block !important;
-        height: 30vw;
-        cursor: move;
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin: 70px 0;
 
         &:hover {
-            .item-content {
+            &:before {
+                border-color: #fff;
+            }
+
+            img {
                 opacity: 1;
+            }
 
-                &__bg {
-                    width: 100%;
-                }
+            .item-content {
+                transform: translateX(-10%);
 
-                h2 {
-                    transform: translateY(0);
-                    opacity: 1;
+                span {
+                    color: #ffffff;
                 }
-        
-                a {
-                    transform: translateY(0);
-                    opacity: 1;
+            }
+
+            &:nth-child(2n) {
+                .item-content {
+                    transform: translateX(10%);
                 }
+            }
+        }
+
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            z-index: 0;
+            right: 15px;
+            bottom: 0;
+            width: 85%;
+            height: 110%;
+            border: 1px solid $grey;
+            transition: .3s;
+        }
+
+        &:nth-child(2n) {
+            justify-content: flex-start;
+
+            &:before {
+                left: 15px;
+                right: unset;
+            }
+
+            .item-content {
+                position: absolute;
+                top: 30%;
+                left: unset;
+                right: 0;
+                text-align: right;
             }
         }
     }
 
-    .item-parallax {
-        position: absolute;
-        top: 0;
-        left: 0;
+    .item-image {
+        width: 80%;
+        position: relative;
+        z-index: 3;
+    }
+
+    img {
         height: 100%;
         width: 100%;
-        overflow: hidden;
-
-        img {
-            position: relative;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
+        opacity: 0.5;
+        transition: .3s;
     }
 
     .item-content {
         position: absolute;
-        top: 0;
+        top: 30%;
         left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(#000, 0.6);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        opacity: 0;
-        transition: .2s;
+        transition: .5s;
+        z-index: 3;
 
         h2 {
             margin: 0;
-            transform: translateY(10px);
-            opacity: 0;
-            transition-delay: .5s;
-            transition-duration: 0.3s;
+            font-size: 30px;
         }
 
         a {
-            display: block;
-            margin-top: 5px;
-            font-weight: 300;
-            color: $green;
-            transform: translateY(-10px);
-            opacity: 0;
-            transition-delay: 0.5s;
-            transition-duration: 0.3s;
-
-            &:hover {
-                text-decoration: underline;
-            }
+            color: #ffffff;
         }
 
-        &__text {
-            position: relative;
-            z-index: 3;
-            text-align: center;
-        }
-
-        &__bg {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: rgba( #000, 0.8 );
-            transition-duration: .3s;
-            transition-delay: 0.15s;
-            z-index: 0;
-            width: 0;
-            height: 100px;
+        span {
+            color: $grey;
+            transition: .5s;
         }
     }
 }
