@@ -1097,6 +1097,18 @@ a {
 	}
 }
 
+.grey {
+	color: #666;
+}
+
+.d-flex {
+	display: flex;
+}
+
+.flex-column {
+	flex-direction: column;
+}
+
 .pad-0 {
 	padding: 0;
 }
@@ -1459,6 +1471,7 @@ footer ion-icon {
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
+	position: relative;
 }
 
 .awards-banner:before {
@@ -1488,6 +1501,15 @@ footer ion-icon {
 
 .awards-banner h2 {
 	margin: 10px 0 50px;
+}
+
+.awards-banner ion-icon {
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	animation: toTop 1.5s infinite linear;
+	font-size: 20px;
 }
 
 .awards-timeline {
@@ -1875,4 +1897,25 @@ footer ion-icon {
 
 #publications .item-small:hover .item-content h2 {
 	background: #161616;
+}
+
+.contact {
+	margin: 25vh 0;
+}
+
+.contact h2 {
+	font-size: 30px;
+	margin-bottom: 30px;
+}
+
+.contact .container {
+	padding: 0;
+}
+
+.contact a {
+	color: #ffffff;
+}
+
+.contact .map {
+	margin-top: 100px;
 }
