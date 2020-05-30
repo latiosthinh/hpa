@@ -1,0 +1,12 @@
+.team {
+	margin: 15vh 0;
+}
+
+.team svg {
+	width: 300px;
+	margin: 0 auto;
+}
+
+.team .founders {
+	background: 4grey;
+}

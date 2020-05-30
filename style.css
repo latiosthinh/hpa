@@ -1953,3 +1953,106 @@ footer ion-icon {
 .contact .map {
 	margin-top: 100px;
 }
+
+.partners {
+	margin: 20vh 0;
+}
+
+.partners h1 {
+	text-align: center;
+	margin-bottom: 140px;
+	font-size: 36px;
+}
+
+.partners .item {
+	padding: 70px;
+}
+
+.team {
+	margin: 15vh 0;
+}
+
+.team svg {
+	width: 300px;
+	margin: 0 auto;
+}
+
+.team .founders {
+	background: #666;
+	margin-top: 80px;
+	padding: 30px 0 80px;
+}
+
+.team .members {
+	margin: 90px 0 100px;
+}
+
+.team .members .item {
+	margin-bottom: 90px;
+}
+
+.team h2 {
+	font-size: 30px;
+	margin: 0 0 80px;
+	text-align: center;
+}
+
+.team .col-md-4, .team .col-md-3 {
+	display: flex;
+	justify-content: center;
+}
+
+.team .item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 300px;
+	position: relative;
+}
+
+.team .item:hover img {
+	transform: translate3d(-10%, -5%, 0);
+}
+
+.team .item:hover p:before {
+	width: 70px;
+}
+
+.team .item img {
+	transition: .7s;
+}
+
+.team .item:before {
+	content: '';
+	display: block;
+	width: calc( 100% + 35px);
+	height: calc( 100% + 50px);
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+	border: 1px solid #fff;
+}
+
+.team .item h3 {
+	width: 100%;
+	text-align: left;
+	margin: 20px 0 15px;
+}
+
+.team .item p {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	text-align: left;
+}
+
+.team .item p:before {
+	content: '';
+	display: block;
+	height: 1px;
+	width: 40px;
+	background: #ffffff;
+	margin-right: 5px;
+	transition: .7s;
+}
