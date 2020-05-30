@@ -1753,6 +1753,13 @@ footer ion-icon {
 	width: 100%;
 	opacity: 0.5;
 	transition: .3s;
+	max-height: 500px;
+}
+
+@media all and (max-width: 1500px) {
+	#projects img {
+		max-height: 350px;
+	}
 }
 
 #projects .item-content {

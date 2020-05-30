@@ -124,6 +124,11 @@
         width: 100%;
         opacity: 0.5;
         transition: .3s;
+        max-height: 500px;
+
+        @media all and (max-width:1500px) {
+            max-height: 350px;
+        }
     }
 
     .item-content {
