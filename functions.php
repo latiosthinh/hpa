@@ -68,9 +68,11 @@ if ( ! function_exists( 'hpa_setup' ) ) :
 			]
 		);
 
+		add_image_size( 'thumb-880', 880, 585, true );
 		add_image_size( 'thumb-500', 500, 500, true );
 		add_image_size( 'thumb-385', 385, 385, true );
 		add_image_size( 'thumb-315', 315, 170, true );
+		add_image_size( 'thumb-275', 275, 340, true );
 	}
 endif;
 add_action( 'after_setup_theme', 'hpa_setup' );

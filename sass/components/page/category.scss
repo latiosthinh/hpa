@@ -55,16 +55,28 @@
             }
 
             .item-content {
-                transform: translateX(-10%);
+                transform: translate(-10%, 5%);
 
                 span {
                     color: #ffffff;
                 }
+
+                p {
+                    background: rgba( $black, 0.7 );
+                }
+            }
+
+            .item-image {
+                transform: translate(10%, -5%);
             }
 
             &:nth-child(2n) {
                 .item-content {
-                    transform: translateX(10%);
+                    transform: translate(10%, -5%);
+                }
+
+                .item-image {
+                    transform: translate(-10%, 5%);
                 }
             }
         }
@@ -104,6 +116,7 @@
         width: 80%;
         position: relative;
         z-index: 3;
+        transition: .8s;
     }
 
     img {
@@ -125,6 +138,10 @@
             font-size: 30px;
         }
 
+        p {
+            transition: .3s;
+        }
+
         a {
             color: #ffffff;
         }
@@ -132,6 +149,168 @@
         span {
             color: $grey;
             transition: .5s;
+        }
+    }
+}
+
+.pagination {
+    margin: 70px 0 100px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+    .page-numbers {
+        font-size: 16px;
+        color: $grey;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 25px;
+        height: 25px;
+        border-radius: 3px;
+        margin: 0 7px;
+
+        &.current {
+            color: $black;
+            background: #ffffff;
+        }
+    }
+}
+
+#publications {
+
+    .content-width {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .item {
+        margin-bottom: 70px;
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 15px;
+
+        .item-image {
+            text-align: right;
+            transition: .5s;
+        }
+
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            z-index: 0;
+            right: 15px;
+            bottom: 0;
+            width: 70%;
+            height: calc( 100% + 20px );
+            border: 1px solid $grey;
+            transition: .3s;
+        }
+
+        .item-content {
+            position: absolute;
+            max-width: 70%;
+            left: 0;
+            top: 30%;
+            transition: .3s;
+
+            a {
+                color: #ffffff;
+            }
+
+            h2 {
+                transition: .3s;
+            }
+        }
+
+        .item-image {
+            width: 70%;
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .top-news {
+        position: relative;
+        padding: 0;
+        margin-bottom: 130px;
+
+        &:before {
+            display: none;
+        }
+
+        img {
+            width: 50vw;
+            position: absolute;
+            top: 0;
+            right: 0;
+            max-width: unset;
+            height: 400px;
+        }
+
+        .item-content {
+            margin-top: 450px;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            top: unset;
+            left: unset;
+            max-width: unset;
+
+            h2 {
+                position: absolute;
+                top: -200px;
+                font-size: 30px;
+            }
+
+            a {
+                color: #ffffff;
+                position: relative;
+
+                &:hover  {
+                    i {
+                        transform: translateX(100%);
+                    }
+                }
+
+                i {
+                    display: block;
+                    width: 50%;
+                    height: 1px;
+                    background: #ffffff;
+                    transition: .3s;
+                }
+            }
+
+            span {
+                color: $grey;
+            }
+
+            p {
+                flex: 0 0 50%;
+                color: $grey;
+            }
+        }
+    }
+
+
+    .item-small {
+        &:hover {
+            .item-image {
+                transform: translate(-10%, -5%);
+            }
+
+            .item-content {
+                transform: translate(10%, 5%);
+                
+                h2 {
+                    background: $black;
+                }
+            }
         }
     }
 }

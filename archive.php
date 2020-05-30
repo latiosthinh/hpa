@@ -15,5 +15,11 @@ if ( have_posts() ) :
 		get_template_part( 'templates/category/projects' );
 
 	endif;
+
+	if ( is_category('publications') ) :
+
+		get_template_part( 'templates/category/publications' );
+
+	endif;
 endif;
 get_footer();

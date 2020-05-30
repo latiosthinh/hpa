@@ -15,10 +15,11 @@
     transform-origin: left top;
     transition: transform 0.2s;
     transform: translate(-50%, -50%);
+    mix-blend-mode: difference;
 
     &.cursor-link {
         transform: scale(10) translate(-50%, -50%);
-        background-color: rgba( #fff, 0.5 );
+        // background-color: rgba( #fff, 0.5 );
     }
 }
 
@@ -37,7 +38,8 @@
     background: $black;
 }
 
-.home {
+.home,
+.category-publications {
     .site-header {
         background: none;
     }
@@ -45,6 +47,7 @@
 
 .site-branding {
     display: flex;
+    position: relative;
 
     .heading {
         display: flex;
@@ -95,6 +98,26 @@
     }
 }
 
+.site-social {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+        display: inline-block;
+        color: #ffffff;
+        margin-left: 15px;
+    }
+
+    ion-icon {
+        font-size: 20px;
+    }
+}
+
 .main-navigation {
     position: absolute;
     top: 100%;
@@ -102,7 +125,7 @@
     right: 0;
     height: 100vh;
     padding: 0;
-    background: #000000;
+    background: $black;
     opacity: 0;
     visibility: hidden;
     transition: .2s;

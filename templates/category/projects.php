@@ -32,6 +32,12 @@ get_header();
 				</div>
 			</div>
 		<?php endwhile; ?>
+
+		<?php the_posts_pagination([
+			'mid_size'  => 2,
+			'prev_text' => '<ion-icon name="arrow-back"></ion-icon>',
+			'next_text' => '<ion-icon name="arrow-forward"></ion-icon>',
+		]); ?>
 	</div>
 </section>
 

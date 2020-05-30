@@ -1,0 +1,105 @@
+.page-template-awards .site-header {
+	background: none;
+}
+
+.awards-banner {
+	height: 100vh;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.awards-banner:before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 0;
+}
+
+.awards-banner .container {
+	position: relative;
+	z-index: 5;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 1200px;
+	text-align: center;
+}
+
+.awards-banner h2 {
+	margin: 10px 0 50px;
+}
+
+.awards-timeline {
+	margin: 150px 0;
+}
+
+.awards-timeline .slick-list {
+	margin: 0 -30px;
+}
+
+.awards-timeline .slick-slide {
+	padding: 0px 30px;
+}
+
+.awards-timeline .slick-slide > div {
+	display: flex;
+	height: 500px;
+	align-items: flex-end;
+}
+
+.awards-timeline .slick-slide:nth-child(2n) > div {
+	align-items: flex-start;
+}
+
+.awards-timeline .description {
+	display: flex;
+	align-items: center;
+	margin-bottom: 7px;
+}
+
+.awards-timeline .description span {
+	display: inline-flex;
+	color: #ffffff;
+}
+
+.awards-timeline .description span:after {
+	content: "";
+	display: block;
+	width: 70px;
+	height: 1px;
+	background: #ffffff;
+}
+
+.awards-timeline .content {
+	display: block;
+	width: 700px;
+	position: relative;
+}
+
+.awards-timeline .content h2 {
+	position: absolute;
+	left: 100%;
+	top: 50%;
+	transform: translateX(-50%);
+	width: 200px;
+	text-align: right;
+	font-size: 24px;
+	text-transform: uppercase;
+}
+
+.awards-timeline a {
+	color: #ffffff;
+}
+
+.awards-timeline img {
+	height: 370px;
+}

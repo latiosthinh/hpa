@@ -35,7 +35,7 @@
 				<span class="heading-expand h">H</span>
 				<div>
 					<a class="link-to-home" href="<?php echo home_url() ?>">ome / Trang chủ</a>
-					<a class="menu-trigger" href="#site-navigation">&P Architects</a>
+					<a class="menu-trigger" data-href="#site-navigation">&P Architects</a>
 				</div>
 			</div>
 
@@ -43,7 +43,7 @@
 				<span class="heading-expand p">P</span>
 				<div>
 					<a class="link-to-project" href="<?php echo home_url( '/projects' ) ?>">rojects / Dự án</a>
-					<a class="link-to-publications" href="#publications">uplications / Ấn phẩm</a>
+					<a class="link-to-publications" href="<?php echo home_url( '/publications' ) ?>">uplications / Ấn phẩm</a>
 				</div>
 			</div>
 
@@ -53,6 +53,12 @@
 					<a class="link-to-architect-people" href="#people">rchitecture for people’s life / Kiến trúc vị dân sinh</a>
 					<a class="link-to-architect-foundation" href="#foundation">rchitecture & social responsibility Foundation / Quỹ ASR</a>
 				</div>
+			</div>
+
+			<div class="site-social">
+				<a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+				<a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+				<a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
 			</div>
 		</div>
 

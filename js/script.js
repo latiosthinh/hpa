@@ -104,6 +104,39 @@
                 touchThreshold: 100
             })
         }
+
+        if ( $( '.awards-timeline__slider' ).length !== 0 ) {
+            $('.awards-timeline__slider').slick({
+                // autoplay: true,
+                // autoplaySpeed: 3000,
+                draggable: true,
+                arrows: false,
+                // prevArrow: '<span class="prev"><ion-icon name="arrow-back"></ion-icon></span>',
+                // nextArrow: '<span class="next"><ion-icon name="arrow-forward"></ion-icon></span>',
+                centerMode: true,
+                centerPadding: '500px',
+                slidesToShow: 1,
+                dots: false,
+                speed: 900,
+                infinite: false,
+                cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
+                touchThreshold: 100,
+                responsive: [
+                    {
+                        breakpoint: 1700,
+                        settings: {
+                            centerPadding: '400px',
+                        }
+                    },
+                    {
+                        breakpoint: 1440,
+                        settings: {
+                            centerPadding: '250px',
+                        }
+                    },
+                ]
+            })
+        }
     }
 
     // barba.init( {
