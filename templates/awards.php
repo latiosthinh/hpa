@@ -17,6 +17,8 @@ get_header();
             A selection of defining moments in an exploration <br>
             through time and the ever fluid description of space.
         </p>
+
+        <ion-icon name="arrow-down-outline"></ion-icon>
     </div>
 </section>
 
