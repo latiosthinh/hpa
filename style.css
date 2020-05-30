@@ -2063,3 +2063,63 @@ footer ion-icon {
 	margin-right: 5px;
 	transition: .7s;
 }
+
+.single-post .content-single {
+	margin-top: 15vh;
+}
+
+.single-post h1 {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 36px;
+	margin-bottom: 50px;
+}
+
+.single-post h1 + p {
+	column-count: 2;
+	column-gap: 30px;
+	display: block;
+	margin: 0 auto;
+	max-width: 1200px;
+}
+
+.single-post .description-project {
+	margin: 90px auto 170px;
+	padding: 0 50px 50px;
+	background: #000000;
+}
+
+.single-post .description-project h3 {
+	font-size: 30px;
+	margin: 30px 0 50px;
+}
+
+.single-post .description-project h4 {
+	text-transform: uppercase;
+	font-size: 18px;
+	padding-top: 15px;
+	border-top: 1px solid #666;
+}
+
+.single-post .description-project h4:first-child {
+	border-top: 0;
+}
+
+.single-post .description-project ul {
+	padding-left: 30px;
+}
+
+.single-post .description-project li {
+	color: #666;
+	list-style: square;
+}
+
+.single-post .description-project p {
+	color: #666;
+	margin-bottom: 20px;
+}
+
+.wp-block-image {
+	text-align: center;
+	margin: 70px 0;
+}

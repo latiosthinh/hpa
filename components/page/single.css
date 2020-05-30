@@ -1,0 +1,39 @@
+.single-post .content-single {
+	margin-top: 15vh;
+}
+
+.single-post h1 {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 36px;
+	margin-bottom: 50px;
+}
+
+.single-post h1 + p {
+	column-count: 2;
+	column-gap: 30px;
+	display: block;
+	margin: 0 auto;
+	max-width: 1200px;
+}
+
+.single-post .description-project {
+	margin: 90px auto 170px;
+	background: #000000;
+}
+
+.single-post .description-project h3 {
+	font-size: 30px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #ffffff;
+}
+
+.single-post .description-project h4 {
+	text-transform: uppercase;
+	font-size: 18px;
+}
+
+.wp-block-image {
+	text-align: center;
+	margin: 70px 0;
+}

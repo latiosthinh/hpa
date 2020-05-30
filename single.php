@@ -10,29 +10,47 @@
 get_header();
 ?>
 
-	<div class="">
+	<div class="container pad-0 content-single">
 
 		<?php
 		while ( have_posts() ) :
 			the_post();
-
-			get_template_part( 'template-parts/content', get_post_type() );
-
-			the_post_navigation(
-				array(
-					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'gsk' ) . '</span> <span class="nav-title">%title</span>',
-					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'gsk' ) . '</span> <span class="nav-title">%title</span>',
-				)
-			);
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
 		?>
 
+			<h1><?= the_title(); ?></h1>
+		
+		<?php the_content(); ?>
+		
+		<div class="col-md-6 description-project">
+			<div class="row">
+				<div class="col-md-12">
+					<h3>Descriptions.</h3>
+				</div>
+
+				<div class="col-md-6">
+					<h4>Location</h4>
+					<p><?= rwmb_meta( 'location' ) ?></p>
+
+					<h4>Client</h4>
+					<p><?= rwmb_meta( 'client' ) ?></p>
+
+					<h4>Area</h4>
+					<p><?= rwmb_meta( 'area' ) ?></p>
+
+					<h4>Status</h4>
+					<p><?= rwmb_meta( 'status' ) ?></p>
+				</div>
+
+				<div class="col-md-6">
+					<h4>Designers</h4>
+					<p><?= rwmb_meta( 'designer' ) ?></p>
+				</div>
+			</div>
+
+			<?php
+			endwhile; // End of the loop.
+			?>
+		</div>
 	</div>
 
 <?php
