@@ -96,20 +96,13 @@ add_action( 'widgets_init', 'hpa_widgets_init' );
  * Enqueue scripts and styles.
  */
 function hpa_scripts() {
-	wp_enqueue_style( 'slick', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css', [], _S_VERSION );
-	wp_enqueue_style( 'aos', 'https://unpkg.com/aos@2.3.1/dist/aos.css', [], _S_VERSION );
 	wp_enqueue_style( 'hpa-style', get_stylesheet_uri(), [], _S_VERSION );
 
-
-	wp_enqueue_script( 'gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js', [], _S_VERSION, true );
-	wp_enqueue_script( 'aos', 'https://unpkg.com/aos@2.3.1/dist/aos.js', [], _S_VERSION, true );
-	wp_enqueue_script( 'barba', 'https://cdn.jsdelivr.net/npm/@barba/core', [], _S_VERSION, true );
+	wp_enqueue_script( 'gsap', JS. '/gsap.js', [], _S_VERSION, true );
 	wp_enqueue_script( 'hpa-navigation', JS. '/navigation.js', [], _S_VERSION, true );
-	wp_enqueue_script( 'slick', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js', ['jquery'], _S_VERSION, true );
+	wp_enqueue_script( 'slick', JS . '/slick.js', ['jquery'], _S_VERSION, true );
 	wp_enqueue_script( 'hpa-skip-link-focus-fix', JS . '/skip-link-focus-fix.js', ['jquery'], _S_VERSION, true );
 	wp_enqueue_script( 'hpa-script', JS . '/script.js', ['jquery'], _S_VERSION, true );
-
-
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

@@ -5,11 +5,11 @@
 get_header();
 ?>
 
-<!-- <section class="loading">
-    <?php //get_template_part( 'template-parts/svg' ); ?>
+<section class="loading">
+    <img src="<?= IMG . '/logo.jpg' ?>" alt="H&P Architect">
 
     <h1>H&P Architects</h1>
-</section> -->
+</section>
 
 <section class="banner swiper-container">
     <div class="banner-slider swiper-wrapper">
@@ -27,20 +27,7 @@ get_header();
                 $projects->the_post();
         ?>
             <div class="item swiper-slide">
-                <a href="<?php the_permalink(); ?>" class="image">
-                    <?php the_post_thumbnail( 'full' ) ?>
-                </a>
-
-                <div class="content">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, ut.</p>
-                    <h2>
-                        <a href="<?php the_permalink(); ?>">
-                            <?php echo get_the_title(); ?>
-                        </a>
-                    </h2>
-                    <span>/</span>
-                    <span>2020</span>
-                </div>
+                <?php the_post_thumbnail( 'full' ) ?>
             </div>
         <?php
             endwhile;

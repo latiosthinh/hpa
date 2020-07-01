@@ -34,7 +34,7 @@
     left: 0;
     right: 0;
     z-index: 20;
-    padding: 25px 50px;
+    padding: 40px 0 0 55px;
     background: $black;
 }
 
@@ -55,17 +55,28 @@
         transition: .3s;
         overflow: hidden;
         margin-right: 5px;
+        transition: .2s;
 
         &:nth-child(2) {
             .heading-expand {
                 padding-left: 2px;
+            }
+
+            div {
+                margin-left: 5px;
+            }
+        }
+
+        &:nth-child(3) {
+            div {
+                margin-left: 5px;
             }
         }
 
         div {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: space-around;
             opacity: 0;
 
             &.active {
@@ -75,9 +86,8 @@
     }
 
     .heading-expand {
-        font-size: 50px;
+        font-size: 87px;
         line-height: 1;
-        font-family: $f2;
         color: #ffffff;
         cursor: pointer;
         display: inline-block;
@@ -89,10 +99,12 @@
     }
 
     a {
+        font-size: 32px;
         color: #ffffff;
         white-space: nowrap;
+        transition: .2s;
 
-        &.active {
+        &.active, &:hover {
             color: $green;
         }
     }
