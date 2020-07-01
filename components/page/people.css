@@ -1,0 +1,17 @@
+.page-template-people h2 {
+	margin-bottom: 20px;
+}
+
+.page-template-people h2 + p {
+	margin-bottom: 80px;
+}
+
+.page-template-people h3 {
+	margin-bottom: 20px;
+}
+
+.page-template-people img {
+	display: block;
+	margin-bottom: 30px;
+	width: 100%;
+}

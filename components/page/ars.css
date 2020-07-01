@@ -3,6 +3,11 @@
 	position: relative;
 }
 
+.page-template-ars .ars img {
+	display: block;
+	margin-bottom: 30px;
+}
+
 .page-template-ars .col-left h2 {
 	text-align: left;
 	margin: 42px 0 15px;

@@ -17,6 +17,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
+	<script src="https://kit.fontawesome.com/be9a4f74a7.js" crossorigin="anonymous"></script>
+
 	<?php wp_head(); ?>
 </head>
 
@@ -57,6 +59,18 @@
 				<a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
 			</div>
 		</div>
+
+		<ul class="site-socials">
+			<li>
+				<a href="#"><i class="fab fa-facebook-square"></i></a>
+			</li>
+			<li>
+				<a href="#"><i class="fab fa-instagram"></i></a>
+			</li>
+			<li>
+				<a href="#"><i class="fab fa-youtube"></i></a>
+			</li>
+		</ul>
 
 	</header>
 
