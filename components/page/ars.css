@@ -1,0 +1,23 @@
+.page-template-ars .ars > .container > .row {
+	justify-content: space-between;
+	position: relative;
+}
+
+.page-template-ars .col-left h2 {
+	text-align: left;
+	margin: 42px 0 15px;
+}
+
+.page-template-ars .col-left h2 + p {
+	margin-bottom: 70px;
+}
+
+.page-template-ars h2 {
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.page-template-ars h3 {
+	text-align: center;
+	margin-bottom: 15px;
+}

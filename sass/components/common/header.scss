@@ -34,8 +34,8 @@
     left: 0;
     right: 0;
     z-index: 20;
-    padding: 40px 0 0 55px;
-    background: $black;
+    padding: 30px 0 0 41px;
+    background: #fff;
 }
 
 .home,
@@ -88,7 +88,7 @@
     .heading-expand {
         font-size: 87px;
         line-height: 1;
-        color: #ffffff;
+        color: #000;
         cursor: pointer;
         display: inline-block;
         transition: .2s;
@@ -100,7 +100,7 @@
 
     a {
         font-size: 32px;
-        color: #ffffff;
+        color: #000;
         white-space: nowrap;
         transition: .2s;
 

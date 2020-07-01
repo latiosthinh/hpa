@@ -1048,13 +1048,13 @@ object {
 body {
 	font-family: "Verdana", sans-serif;
 	font-size: 14px;
-	line-height: 24px;
-	background: #161616;
-	color: #ffffff;
+	line-height: 25px;
+	color: #000;
 }
 
 .site {
 	overflow: hidden;
+	padding-top: 200px;
 }
 
 .site:after {
@@ -1078,6 +1078,14 @@ ol {
 
 h1, h2, h3, h4, h5, h6 {
 	line-height: 1.3;
+}
+
+h2 {
+	font-size: 20px;
+}
+
+h3 {
+	font-size: 16px;
 }
 
 a {
@@ -1264,8 +1272,8 @@ a {
 	left: 0;
 	right: 0;
 	z-index: 20;
-	padding: 40px 0 0 55px;
-	background: #161616;
+	padding: 30px 0 0 41px;
+	background: #fff;
 }
 
 .home .site-header,
@@ -1313,7 +1321,7 @@ a {
 .site-branding .heading-expand {
 	font-size: 87px;
 	line-height: 1;
-	color: #ffffff;
+	color: #000;
 	cursor: pointer;
 	display: inline-block;
 	transition: .2s;
@@ -1325,7 +1333,7 @@ a {
 
 .site-branding a {
 	font-size: 32px;
-	color: #ffffff;
+	color: #000;
 	white-space: nowrap;
 	transition: .2s;
 }
@@ -2162,6 +2170,30 @@ footer ion-icon {
 	background: #ffffff;
 	margin-right: 5px;
 	transition: .7s;
+}
+
+.page-template-ars .ars > .container > .row {
+	justify-content: space-between;
+	position: relative;
+}
+
+.page-template-ars .col-left h2 {
+	text-align: left;
+	margin: 42px 0 15px;
+}
+
+.page-template-ars .col-left h2 + p {
+	margin-bottom: 70px;
+}
+
+.page-template-ars h2 {
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.page-template-ars h3 {
+	text-align: center;
+	margin-bottom: 15px;
 }
 
 .single-post .content-single {
