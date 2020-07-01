@@ -1,8 +1,10 @@
-.page-template-people h2 {
+.page-template-people .heading-expand
+h2 {
 	margin-bottom: 20px;
 }
 
-.page-template-people h2 + p {
+.page-template-people .heading-expand
+h2 + p {
 	margin-bottom: 80px;
 }
 

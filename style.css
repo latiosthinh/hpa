@@ -1059,6 +1059,10 @@ body {
 	}
 }
 
+.home .site {
+	padding-top: 0;
+}
+
 .site {
 	overflow: hidden;
 	padding-top: 200px;
@@ -1499,65 +1503,75 @@ footer ion-icon {
 
 .banner .slick-arrow {
 	position: absolute;
-	bottom: 0;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 70px;
-	height: 70px;
+	z-index: 3;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 37px;
+	height: 17px;
 	z-index: 5;
+	cursor: pointer;
 }
 
 .banner .slick-arrow.prev {
-	background: #ffffff;
-	right: 60%;
+	left: 49px;
 }
 
 .banner .slick-arrow.next {
-	background: #161616;
-	left: 40%;
+	right: 48px;
 }
 
-.banner .slick-arrow.next ion-icon {
-	color: #fff;
+.page-template-about .heading-expand.h {
+	color: #429627;
 }
 
-.banner .slick-arrow ion-icon {
-	font-size: 30px;
-	color: #161616;
+.page-template-about .link-to-about {
+	color: #429627;
+}
+
+.page-template-about .row {
+	justify-content: space-between;
 }
 
 .about {
-	margin: 20vh 0 0;
+	position: relative;
+	z-index: 3;
 }
 
-.about .vision p {
-	font-size: 18px;
-}
-
-.about .services {
-	margin-top: 150px;
-}
-
-.about .services h1 {
-	font-size: 36px;
-	margin-bottom: 50px;
-}
-
-.about .services .item {
+.about .item {
 	margin-bottom: 40px;
 }
 
-.about .services .item h3 {
+.about h2 {
+	display: inline-flex;
+	text-transform: uppercase;
+	font-weight: 400;
+	cursor: pointer;
+	position: relative;
 	margin-bottom: 15px;
+	transition: .3s;
 }
 
-.about .services .item p {
-	color: #666;
+.about h2 i {
+	position: absolute;
+	right: -20px;
+	top: 15px;
+	transform: translateY(-50%) rotate(-90deg);
+	transform-origin: center;
+	transition: .3s;
 }
 
-.about-img {
-	margin-top: 150px;
+.about h2:hover, .about h2.active {
+	color: #429627;
+}
+
+.about h2:hover i, .about h2.active i {
+	right: -24px;
+	top: 10px;
+	transform: translateY(-50%) rotate(0);
+}
+
+.about p {
+	display: none;
 }
 
 .page-template-awards .site-header {
@@ -2063,6 +2077,14 @@ footer ion-icon {
 	transition: .7s;
 }
 
+.page-template-people .heading-expand.a {
+	color: #429627;
+}
+
+.page-template-people .link-to-architect-people {
+	color: #429627;
+}
+
 .page-template-people h2 {
 	margin-bottom: 20px;
 }
@@ -2079,6 +2101,14 @@ footer ion-icon {
 	display: block;
 	margin-bottom: 30px;
 	width: 100%;
+}
+
+.page-template-ars .heading-expand.a {
+	color: #429627;
+}
+
+.page-template-ars .link-to-architect-foundation {
+	color: #429627;
 }
 
 .page-template-ars .ars > .container > .row {

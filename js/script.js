@@ -40,8 +40,8 @@
                 draggable: true,
                 arrows: true,
                 dots: false,
-                prevArrow: '<span class="prev"><ion-icon name="arrow-back"></ion-icon></span>',
-                nextArrow: '<span class="next"><ion-icon name="arrow-forward"></ion-icon></span>',
+                prevArrow: '<img class="prev" src="' + php_data.img_dir + '/arrow-left.png">',
+                nextArrow: '<img class="next" src="' + php_data.img_dir + '/arrow-right.png">',
                 // fade: true,
                 speed: 900,
                 infinite: true,
@@ -91,5 +91,16 @@
             $( this ).removeClass( 'active' ).css( 'width', $( this ).attr( 'data-width' ) );
             $( this ).children().removeClass( 'active' )
         } )
+
+        if ( $( '.about' ).length !== 0 ) {
+            $( '.item h2' ).on( 'click', function () {
+                let $this = $( this );
+
+                $( '.item h2' ).removeClass( 'active' )
+
+                $this.addClass( 'active' )
+                $this.siblings( 'p' ).slideToggle( 300 )
+            } )
+        }
     } )
 } )( jQuery )

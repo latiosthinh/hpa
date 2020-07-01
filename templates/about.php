@@ -7,37 +7,121 @@ get_header();
 
 <section class="about">
     <div class="container">
-        <div class="row vision">
-            <div class="col-md-4">
-                <p class="grey">Our Visions and Values</p>
-            </div>
+        <div class="row">
+            <div class="col-md-5">
+                <div class="item">
+                    <h2>about <i class="fas fa-sort-down"></i></h2>
 
-            <div class="col-md-8">
-                <p><?= rwmb_meta( 'vision' ) ?></p>
-            </div>
-        </div>
-
-        <div class="row services">
-            <div class="col-md-12">
-                <h1>High-quality architectural services</h1>
-            </div>
-            <?php
-            $services = rwmb_meta( 'services' );
-            if ( ! empty( $services ) ) :
-                foreach ( $services as $s ) :
-            ?>
-                <div class="col-md-4 item">
-                    <h3><?= $s['title']  ?></h3>
-                    <p><?= $s['detail'] ?></p>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae eaque excepturi similique voluptatem voluptas id aperiam sit non soluta rerum eum molestias reprehenderit ipsam qui atque quos, corporis esse ipsa!
+                        <br>
+                        <br>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis provident ducimus sint aperiam distinctio asperiores dolorum vel quam fugit dolore, quae velit esse, eos quaerat temporibus ab at, expedita maxime.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. In adipisci repellendus possimus. Minus dicta quia praesentium, doloremque recusandae dolorum sapiente. Error, ex. Labore recusandae maxime provident magni consequatur voluptatibus expedita rem! Et dicta sunt facere impedit eum maxime quibusdam quidem?
+                    </p>
                 </div>
-            <?php
-                endforeach;
-            endif;
-            ?>
-        </div>
-    </div>
 
-    <img class="about-img" src="<?= IMG . '/banner-1.jpg' ?>">
+                <div class="item">
+                    <h2>founders <i class="fas fa-sort-down"></i></h2>
+
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae eaque excepturi similique voluptatem voluptas id aperiam sit non soluta rerum eum molestias reprehenderit ipsam qui atque quos, corporis esse ipsa!
+                        <br>
+                        <br>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis provident ducimus sint aperiam distinctio asperiores dolorum vel quam fugit dolore, quae velit esse, eos quaerat temporibus ab at, expedita maxime.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. In adipisci repellendus possimus. Minus dicta quia praesentium, doloremque recusandae dolorum sapiente. Error, ex. Labore recusandae maxime provident magni consequatur voluptatibus expedita rem! Et dicta sunt facere impedit eum maxime quibusdam quidem?
+                    </p>
+                </div>
+
+                <div class="item">
+                    <h2>partners <i class="fas fa-sort-down"></i></h2>
+
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae eaque excepturi similique voluptatem voluptas id aperiam sit non soluta rerum eum molestias reprehenderit ipsam qui atque quos, corporis esse ipsa!
+                        <br>
+                        <br>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis provident ducimus sint aperiam distinctio asperiores dolorum vel quam fugit dolore, quae velit esse, eos quaerat temporibus ab at, expedita maxime.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. In adipisci repellendus possimus. Minus dicta quia praesentium, doloremque recusandae dolorum sapiente. Error, ex. Labore recusandae maxime provident magni consequatur voluptatibus expedita rem! Et dicta sunt facere impedit eum maxime quibusdam quidem?
+                    </p>
+                </div>
+
+                <div class="item">
+                    <h2>members <i class="fas fa-sort-down"></i></h2>
+
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae eaque excepturi similique voluptatem voluptas id aperiam sit non soluta rerum eum molestias reprehenderit ipsam qui atque quos, corporis esse ipsa!
+                        <br>
+                        <br>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis provident ducimus sint aperiam distinctio asperiores dolorum vel quam fugit dolore, quae velit esse, eos quaerat temporibus ab at, expedita maxime.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. In adipisci repellendus possimus. Minus dicta quia praesentium, doloremque recusandae dolorum sapiente. Error, ex. Labore recusandae maxime provident magni consequatur voluptatibus expedita rem! Et dicta sunt facere impedit eum maxime quibusdam quidem?
+                    </p>
+                </div>
+
+                <div class="item">
+                    <h2>since 2009 <i class="fas fa-sort-down"></i></h2>
+
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae eaque excepturi similique voluptatem voluptas id aperiam sit non soluta rerum eum molestias reprehenderit ipsam qui atque quos, corporis esse ipsa!
+                        <br>
+                        <br>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis provident ducimus sint aperiam distinctio asperiores dolorum vel quam fugit dolore, quae velit esse, eos quaerat temporibus ab at, expedita maxime.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. In adipisci repellendus possimus. Minus dicta quia praesentium, doloremque recusandae dolorum sapiente. Error, ex. Labore recusandae maxime provident magni consequatur voluptatibus expedita rem! Et dicta sunt facere impedit eum maxime quibusdam quidem?
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-5">
+                <div class="item">
+                    <h2>access <i class="fas fa-sort-down"></i></h2>
+
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae eaque excepturi similique voluptatem voluptas id aperiam sit non soluta rerum eum molestias reprehenderit ipsam qui atque quos, corporis esse ipsa!
+                        <br>
+                        <br>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis provident ducimus sint aperiam distinctio asperiores dolorum vel quam fugit dolore, quae velit esse, eos quaerat temporibus ab at, expedita maxime.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. In adipisci repellendus possimus. Minus dicta quia praesentium, doloremque recusandae dolorum sapiente. Error, ex. Labore recusandae maxime provident magni consequatur voluptatibus expedita rem! Et dicta sunt facere impedit eum maxime quibusdam quidem?
+                    </p>
+                </div>
+
+                <div class="item">
+                    <h2>news <i class="fas fa-sort-down"></i></h2>
+
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae eaque excepturi similique voluptatem voluptas id aperiam sit non soluta rerum eum molestias reprehenderit ipsam qui atque quos, corporis esse ipsa!
+                        <br>
+                        <br>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis provident ducimus sint aperiam distinctio asperiores dolorum vel quam fugit dolore, quae velit esse, eos quaerat temporibus ab at, expedita maxime.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. In adipisci repellendus possimus. Minus dicta quia praesentium, doloremque recusandae dolorum sapiente. Error, ex. Labore recusandae maxime provident magni consequatur voluptatibus expedita rem! Et dicta sunt facere impedit eum maxime quibusdam quidem?
+                    </p>
+                </div>
+
+                <div class="item">
+                    <h2>awards <i class="fas fa-sort-down"></i></h2>
+
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae eaque excepturi similique voluptatem voluptas id aperiam sit non soluta rerum eum molestias reprehenderit ipsam qui atque quos, corporis esse ipsa!
+                        <br>
+                        <br>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis provident ducimus sint aperiam distinctio asperiores dolorum vel quam fugit dolore, quae velit esse, eos quaerat temporibus ab at, expedita maxime.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. In adipisci repellendus possimus. Minus dicta quia praesentium, doloremque recusandae dolorum sapiente. Error, ex. Labore recusandae maxime provident magni consequatur voluptatibus expedita rem! Et dicta sunt facere impedit eum maxime quibusdam quidem?
+                    </p>
+                </div>
+
+                <div class="item">
+                    <h2>others <i class="fas fa-sort-down"></i></h2>
+
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae eaque excepturi similique voluptatem voluptas id aperiam sit non soluta rerum eum molestias reprehenderit ipsam qui atque quos, corporis esse ipsa!
+                        <br>
+                        <br>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis provident ducimus sint aperiam distinctio asperiores dolorum vel quam fugit dolore, quae velit esse, eos quaerat temporibus ab at, expedita maxime.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. In adipisci repellendus possimus. Minus dicta quia praesentium, doloremque recusandae dolorum sapiente. Error, ex. Labore recusandae maxime provident magni consequatur voluptatibus expedita rem! Et dicta sunt facere impedit eum maxime quibusdam quidem?
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </section>
 
 <?php

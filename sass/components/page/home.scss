@@ -72,31 +72,20 @@
 
     .slick-arrow {
         position: absolute;
-        bottom: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 70px;
-        height: 70px;
+        z-index: 3;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 37px;
+        height: 17px;
         z-index: 5;
+        cursor: pointer;
 
         &.prev {
-            background: #ffffff;
-            right: 60%;
+            left: 49px;
         }
 
         &.next {
-            background: $black;
-            left: 40%;
-
-            ion-icon {
-                color: #fff;
-            }
-        }
-
-        ion-icon {
-            font-size: 30px;
-            color: $black;
+            right: 48px;
         }
     }
 }
