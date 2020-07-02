@@ -1123,6 +1123,10 @@ a {
 	text-align: center;
 }
 
+.txt-uppercase {
+	text-transform: uppercase;
+}
+
 .pad-0 {
 	padding: 0;
 }
@@ -2714,6 +2718,10 @@ footer ion-icon {
 
 .page-template-people h2 {
 	margin-bottom: 20px;
+}
+
+.page-template-people .col-md-10 {
+	margin: 0 auto 80px;
 }
 
 .page-template-people .mar-80 {

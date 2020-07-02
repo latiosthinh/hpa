@@ -9,7 +9,7 @@ get_header();
 	<div class="container pad-0">
 		<div class="row">
 			<div class="col-md-12">
-				<h2 class="txt-center">Philosophy / Triết lý</h2>
+				<h2 class="txt-center txt-uppercase">Philosophy / Triết lý</h2>
 
 				<div class="txt-center col-md-10"><?= rwmb_meta( 'philosophy-content' ) ?></div>
 			</div>
@@ -17,10 +17,10 @@ get_header();
 		
 		<div class="row mar-80">
 			<div class="col-md-12 pad-0">
-				<h2 class="txt-center">Essential spaces/không gian thiết yếu</h2>
+				<h2 class="txt-center txt-uppercase">Essential spaces/không gian thiết yếu</h2>
 			</div>
 			<div class="col-md-4">
-				<h3 class="txt-center">Y tế - giáo dục</h3>
+				<h3 class="txt-center txt-uppercase">Y tế - giáo dục</h3>
 				<?php
 				$args = [
 					'post_type'      => 'afpl',
@@ -50,7 +50,7 @@ get_header();
 			</div>
 
 			<div class="col-md-4">
-				<h3 class="txt-center">Nhà ở mô-đun</h3>
+				<h3 class="txt-center txt-uppercase">Nhà ở mô-đun</h3>
 				<?php
 				$args = [
 					'post_type'      => 'afpl',
@@ -80,7 +80,7 @@ get_header();
 			</div>
 
 			<div class="col-md-4">
-				<h3 class="txt-center">KG thân thiện</h3>
+				<h3 class="txt-center txt-uppercase">KG thân thiện</h3>
 				<?php
 				$args = [
 					'post_type'      => 'afpl',
