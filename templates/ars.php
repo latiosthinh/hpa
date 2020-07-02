@@ -27,8 +27,12 @@ get_header();
 						<h3>Y tế - giáo dục</h3>
 						<?php
 						$args = [
-							'post_type' => 'post',
-							'posts_per_page' => 5,
+							'post_type' => 'asr',
+							'tax_query' => [
+								'taxonomy' => 'asr-category',
+								'field'    => 'slug',
+								'terms'    => [ 'y-te-giao-duc' ],
+							]
 						];
 
 						$projects = new WP_Query($args);
@@ -43,6 +47,7 @@ get_header();
 						<?php
 							endwhile;
 						endif;
+						wp_reset_postdata();
 						?>
 					</div>
 
@@ -50,8 +55,12 @@ get_header();
 						<h3>Nhà ở mô-đun</h3>
 						<?php
 						$args = [
-							'post_type' => 'post',
-							'posts_per_page' => 5,
+							'post_type' => 'asr',
+							'tax_query' => [
+								'taxonomy' => 'asr-category',
+								'field'    => 'slug',
+								'terms'    => [ 'nha-o-mo-dun' ],
+							]
 						];
 
 						$projects = new WP_Query($args);
@@ -66,6 +75,7 @@ get_header();
 						<?php
 							endwhile;
 						endif;
+						wp_reset_postdata();
 						?>
 					</div>
 				</div>

@@ -21,8 +21,14 @@ get_header();
 				<h3 class="txt-center">Y tế - giáo dục</h3>
 				<?php
 				$args = [
-					'post_type' => 'post',
-					'posts_per_page' => 5,
+					'post_type'      => 'afpl',
+					'tax_query' => [
+						[
+							'taxonomy' => 'afpl-category',
+							'field'    => 'slug',
+							'terms'    => [ 'y-te-giao-duc' ],
+						]
+					]
 				];
 
 				$projects = new WP_Query($args);
@@ -37,6 +43,7 @@ get_header();
 				<?php
 					endwhile;
 				endif;
+				wp_reset_postdata();
 				?>
 			</div>
 
@@ -44,8 +51,14 @@ get_header();
 				<h3 class="txt-center">Nhà ở mô-đun</h3>
 				<?php
 				$args = [
-					'post_type' => 'post',
-					'posts_per_page' => 5,
+					'post_type'      => 'afpl',
+					'tax_query' => [
+						[
+							'taxonomy' => 'afpl-category',
+							'field'    => 'slug',
+							'terms'    => [ 'nha-o-mo-dun' ],
+						]
+					]
 				];
 
 				$projects = new WP_Query($args);
@@ -60,6 +73,7 @@ get_header();
 				<?php
 					endwhile;
 				endif;
+				wp_reset_postdata();
 				?>
 			</div>
 
@@ -67,8 +81,14 @@ get_header();
 				<h3 class="txt-center">KG thân thiện</h3>
 				<?php
 				$args = [
-					'post_type' => 'post',
-					'posts_per_page' => 5,
+					'post_type'      => 'afpl',
+					'tax_query' => [
+						[
+							'taxonomy' => 'afpl-category',
+							'field'    => 'slug',
+							'terms'    => [ 'kg-than-thien' ],
+						]
+					]
 				];
 
 				$projects = new WP_Query($args);
@@ -83,6 +103,7 @@ get_header();
 				<?php
 					endwhile;
 				endif;
+				wp_reset_postdata();
 				?>
 			</div>
 		</div>

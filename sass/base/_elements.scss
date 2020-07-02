@@ -18,6 +18,11 @@ body {
 	}
 }
 
+main {
+	position: relative;
+	z-index: 2;
+}
+
 .site {
 	overflow: hidden;
 

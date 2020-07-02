@@ -11,20 +11,6 @@
  * @param array $classes Classes for the body element.
  * @return array
  */
-function gsk_body_classes( $classes ) {
-	// Adds a class of hfeed to non-singular pages.
-	if ( ! is_singular() ) {
-		$classes[] = 'hfeed';
-	}
-
-	// Adds a class of no-sidebar when there is no sidebar present.
-	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
-		$classes[] = 'no-sidebar';
-	}
-
-	return $classes;
-}
-add_filter( 'body_class', 'gsk_body_classes' );
 
 /**
  * Add a pingback url auto-discovery header for single posts, pages, or attachments.
@@ -35,19 +21,3 @@ function gsk_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'gsk_pingback_header' );
-
-function get_url_by_template( $template ){
-	$url = null;
-	
-    $pages = query_posts( array(
-		'post_type' =>'page',
-		'meta_key'  =>'_wp_page_template',
-		'meta_value'=> $template->name
-	) );
-	
-    if ( isset( $pages[0] ) ) {
-        $url = get_page_link( $pages[0]->ID );
-	}
-	
-    return $url;
-}

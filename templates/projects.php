@@ -1,6 +1,6 @@
 <?php
 /**
- * Category Template: Projects
+ * Template name: Projects
  */
 get_header();
 ?>
@@ -45,7 +45,18 @@ get_header();
 		</div>
 
 		<div class="row">
-		<?php while ( have_posts() ) : the_post(); ?>
+		<?php 
+		$args = [
+			'post_type'      => 'project',
+			'posts_per_page' => 8
+		];
+
+		$projects = new WP_Query($args);
+
+		if ( $projects->have_posts() ) :
+			while ( $projects->have_posts() ) :
+				$projects->the_post();
+		?>
 			<div class="item col-md-3">
 				<a class="item-image" href="<?php the_permalink() ?>">
 					<?php the_post_thumbnail( 'thumb-270' ) ?>
@@ -58,15 +69,12 @@ get_header();
 
 				<a class="item-readmore" href="<?php the_permalink() ?>">+</a>
 			</div>
-		<?php endwhile; ?>
-		</div>
-		<?php
-		// the_posts_pagination([
-		// 	'mid_size'  => 2,
-		// 	'prev_text' => '<ion-icon name="arrow-back"></ion-icon>',
-		// 	'next_text' => '<ion-icon name="arrow-forward"></ion-icon>',
-		// ]);
+		<?php 
+			endwhile;
+		endif;
 		?>
+		</div>
+		
 	</div>
 </section>
 
