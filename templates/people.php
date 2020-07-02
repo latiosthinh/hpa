@@ -15,7 +15,7 @@ get_header();
 			</div>
 		</div>
 		
-		<div class="row">
+		<div class="row mar-80">
 			<div class="col-md-12 pad-0">
 				<h2 class="txt-center">Essential spaces/không gian thiết yếu</h2>
 			</div>

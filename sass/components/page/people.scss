@@ -10,10 +10,10 @@
 
 	h2 {
 		margin-bottom: 20px;
+	}
 
-		& + div {
-			margin: 0 auto 80px;
-		}
+	.mar-80 {
+		margin: 0 auto 80px;
 	}
 
 	h3 {
@@ -39,6 +39,7 @@
 
 			> .row {
 				flex: 0 0 75%;
+				margin-right: 0;
 
 				&:first-child {
 					flex: 0 0 25%;
