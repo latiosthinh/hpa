@@ -49,7 +49,7 @@
 				<span class="heading-expand a" data-max-width="980px">A</span>
 				<div>
 					<a class="link-to-architect-people" href="<?php echo home_url( '/peoples-life' ) ?>">rchitecture for people’s life / Kiến trúc vị dân sinh</a>
-					<a class="link-to-architect-foundation" href="<?php echo home_url( '/ars' ) ?>">rchitecture & social responsibility Foundation / Quỹ ASR</a>
+					<a class="link-to-architect-foundation" href="<?php echo home_url( '/asr' ) ?>">rchitecture & social responsibility Foundation / Quỹ ASR</a>
 				</div>
 			</div>
 

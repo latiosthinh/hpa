@@ -10,13 +10,13 @@ get_header();
 		<div class="row">
 			<div class="col-md-5 col-left">
 				<h2>Out vision / Tầm nhìn</h2>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, ratione distinctio? Quia eaque expedita fugit veniam numquam cumque a, officiis assumenda, magnam necessitatibus similique, ut at eum error dicta ipsa.</p>
+				<?= rwmb_meta( 'vision' ) ?>
 
 				<h2>Leadership / Con người</h2>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, ratione distinctio? Quia eaque expedita fugit veniam numquam cumque a, officiis assumenda, magnam necessitatibus similique, ut at eum error dicta ipsa.</p>
+				<?= rwmb_meta( 'leadership' ) ?>
 
 				<h2>Donate / Ủng hộ</h2>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, ratione distinctio? Quia eaque expedita fugit veniam numquam cumque a, officiis assumenda, magnam necessitatibus similique, ut at eum error dicta ipsa.</p>
+				<?= rwmb_meta( 'donate' ) ?>
 			</div>
 
 			<div class="col-md-6">

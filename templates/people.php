@@ -11,7 +11,7 @@ get_header();
 			<div class="col-md-12">
 				<h2 class="txt-center">Philosophy / Triết lý</h2>
 
-				<p class="txt-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, ratione distinctio? Quia eaque expedita fugit veniam numquam cumque a, officiis assumenda, magnam necessitatibus similique, ut at eum error dicta ipsa.</p>
+				<div class="txt-center col-md-10"><?= rwmb_meta( 'philosophy-content' ) ?></div>
 			</div>
 		</div>
 		
