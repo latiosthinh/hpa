@@ -11,8 +11,8 @@ get_header();
     <h1>H&P Architects</h1>
 </section>
 
-<section class="banner swiper-container">
-    <div class="banner-slider swiper-wrapper">
+<section class="banner">
+    <div class="banner-slider">
         <?php
         $args = [
             'post_type'      => 'post',
@@ -26,7 +26,7 @@ get_header();
             while ( $projects->have_posts() ) :
                 $projects->the_post();
         ?>
-            <div class="item swiper-slide">
+            <div class="item">
                 <?php the_post_thumbnail( 'full' ) ?>
             </div>
         <?php
@@ -34,11 +34,6 @@ get_header();
         endif;
         ?>
     </div>
-
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-
-    <div class="swiper-scrollbar"></div>
 </section>
 
 <?php

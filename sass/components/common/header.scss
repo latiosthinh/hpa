@@ -1,130 +1,135 @@
 .screen-reader-text {
-    display: none;
+	display: none;
 }
 
 .menu-toggle {
-    display: none;
+	display: none;
 }
 
 .site-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 20;
-    padding: 30px 0 0 41px;
-    background: rgba( #fff, 0 );
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 20;
+	padding: 30px 0 0 41px;
+	background: rgba( #fff, 0 );
 }
 
-.home,
-.category-publications {
-    .site-header {
-        background: none;
-    }
+.home {
+	.site-header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 20;
+		padding: 30px 0 0 41px;
+		background: rgba( #fff, 0 );
+	}
 }
 
 .site-branding {
-    display: flex;
-    position: relative;
+	display: flex;
+	position: relative;
 
-    .heading {
-        display: flex;
-        overflow: hidden;
-        transition: .3s;
-        overflow: hidden;
-        margin-right: 5px;
-        transition: .2s;
+	.heading {
+		display: flex;
+		overflow: hidden;
+		transition: .3s;
+		overflow: hidden;
+		margin-right: 5px;
+		transition: .2s;
 
-        &:nth-child(2) {
-            .heading-expand {
-                padding-left: 2px;
-            }
+		&:nth-child(2) {
+			.heading-expand {
+				padding-left: 2px;
+			}
 
-            div {
-                margin-left: 5px;
-            }
-        }
+			div {
+				margin-left: 5px;
+			}
+		}
 
-        &:nth-child(3) {
-            div {
-                margin-left: 5px;
-            }
-        }
+		&:nth-child(3) {
+			div {
+				margin-left: 5px;
+			}
+		}
 
-        div {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            opacity: 0;
+		div {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			height: 79px;
+			margin-top: 8px;
+			opacity: 0;
 
-            &.active {
-                opacity: 1;
-            }
-        }
-    }
+			&.active {
+				opacity: 1;
+			}
+		}
+	}
 
-    .heading-expand {
-        font-size: 87px;
-        line-height: 1;
-        color: #000;
-        cursor: pointer;
-        display: inline-block;
-        transition: .2s;
+	.heading-expand {
+		font-size: 87px;
+		line-height: 1;
+		color: #000;
+		cursor: pointer;
+		display: inline-block;
+		transition: .2s;
 
-        &.active, &:hover {
-            color: $green;
-        }
-    }
+		&.active, &:hover {
+			color: $green;
+		}
+	}
 
-    a {
-        font-size: 32px;
-        color: #000;
-        white-space: nowrap;
-        transition: .2s;
+	a {
+		font-size: 32px;
+		color: #000;
+		white-space: nowrap;
+		transition: .2s;
 
-        &.active, &:hover {
-            color: $green;
-        }
-    }
-}
-
-.site-social {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    a {
-        display: inline-block;
-        color: #ffffff;
-        margin-left: 15px;
-    }
-
-    ion-icon {
-        font-size: 20px;
-    }
+		&.active, &:hover {
+			color: $green;
+		}
+	}
 }
 
 .site-socials {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    top: 19px;
-    right: 48px;
+	position: absolute;
+	top: 44px;
+	right: 48px;
 
-    a {
-        font-size: 20px;
-        color: #000000;
-        transition: .3s;
+	li {
+		position: absolute;
+		top: 0;
+		right: 1px;
 
-        &:hover {
-            color: $green;
-        }
-    }
+		&:nth-child(2) {
+			top: 21px;
+		}
+
+		&:nth-child(3) {
+			right: -1px;
+			top: 43px;
+		}
+	}
+
+	a {
+		font-size: 20px;
+		color: #000000;
+		transition: .3s;
+
+		&:hover {
+			color: $green;
+		}
+	}
+
+	.fa-facebook-square {
+		border-radius: 5px;
+		overflow: hidden;
+		font-size: 20px;
+		height: 19px;
+		width: 17px;
+	}
 }

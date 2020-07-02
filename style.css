@@ -1926,9 +1926,14 @@ a {
 	background: rgba(255, 255, 255, 0);
 }
 
-.home .site-header,
-.category-publications .site-header {
-	background: none;
+.home .site-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 20;
+	padding: 30px 0 0 41px;
+	background: rgba(255, 255, 255, 0);
 }
 
 .site-branding {
@@ -1961,6 +1966,8 @@ a {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
+	height: 79px;
+	margin-top: 8px;
 	opacity: 0;
 }
 
@@ -1992,35 +1999,25 @@ a {
 	color: #429627;
 }
 
-.site-social {
-	position: absolute;
-	top: 50%;
-	right: 0;
-	transform: translateY(-50%);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.site-social a {
-	display: inline-block;
-	color: #ffffff;
-	margin-left: 15px;
-}
-
-.site-social ion-icon {
-	font-size: 20px;
-}
-
 .site-socials {
-	display: flex;
-	flex-direction: column;
 	position: absolute;
-	height: 100%;
-	justify-content: center;
-	align-items: center;
-	top: 19px;
+	top: 44px;
 	right: 48px;
+}
+
+.site-socials li {
+	position: absolute;
+	top: 0;
+	right: 1px;
+}
+
+.site-socials li:nth-child(2) {
+	top: 21px;
+}
+
+.site-socials li:nth-child(3) {
+	right: -1px;
+	top: 43px;
 }
 
 .site-socials a {
@@ -2031,6 +2028,14 @@ a {
 
 .site-socials a:hover {
 	color: #429627;
+}
+
+.site-socials .fa-facebook-square {
+	border-radius: 5px;
+	overflow: hidden;
+	font-size: 20px;
+	height: 19px;
+	width: 17px;
 }
 
 footer {
@@ -2107,7 +2112,6 @@ footer ion-icon {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	cursor: pointer;
 }
 
 .home .loading h1 {
@@ -2116,10 +2120,12 @@ footer ion-icon {
 	font-weight: 400;
 	margin-top: 5px;
 	opacity: 0;
+	cursor: pointer;
 }
 
-.home image {
+.home img {
 	width: 365px;
+	cursor: pointer;
 	opacity: 0;
 }
 
