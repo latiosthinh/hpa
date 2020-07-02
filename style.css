@@ -2123,7 +2123,7 @@ footer ion-icon {
 	cursor: pointer;
 }
 
-.home img {
+.home .loading img {
 	width: 365px;
 	cursor: pointer;
 	opacity: 0;

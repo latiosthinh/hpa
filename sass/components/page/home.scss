@@ -24,12 +24,14 @@
             opacity: 0;
             cursor: pointer;
         }
+
+        img {
+            width: 365px;
+            cursor: pointer;
+            opacity: 0;
+        }
     }
-    img {
-        width: 365px;
-        cursor: pointer;
-        opacity: 0;
-    }
+    
 }
 
 .banner {
