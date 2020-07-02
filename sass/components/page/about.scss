@@ -36,7 +36,6 @@
 			top: 15px;
 			transform: translateY(-50%) rotate(-90deg);
 			transform-origin: center;
-			transition: .3s;
 		}
 
 		&:hover, &.active {
@@ -50,7 +49,8 @@
 		}
 	}
 
-	p {
+	.content {
+		word-wrap: anywhere;
 		display: none;
 	}
 }

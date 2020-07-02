@@ -23,6 +23,7 @@
             $( this ).children().removeClass( 'active' )
         } )
 
+
         setTimeout(() => {
             $this.addClass( 'active' )
             $this.parent().addClass( 'active' )
@@ -30,6 +31,11 @@
 
             $this.siblings( 'div' ).addClass( 'active' )
         }, 0);
+    } )
+
+    $( '.heading' ).on( 'mouseleave', function() {
+        $( this ).removeClass( 'active' ).css( 'width', $( this ).attr( 'data-width' ) );
+        $( this ).children().removeClass( 'active' )
     } )
 
     var slider = function() {
@@ -93,13 +99,16 @@
         } )
 
         if ( $( '.about' ).length !== 0 ) {
+			let count = 0;
+
             $( '.item h2' ).on( 'click', function () {
+				count += 1;
                 let $this = $( this );
 
                 $( '.item h2' ).removeClass( 'active' )
 
-                $this.addClass( 'active' )
-                $this.siblings( 'p' ).slideToggle( 300 )
+                count%2 == 0 ? $this.removeClass( 'active' ) : $this.addClass( 'active' )
+                $this.siblings( '.content' ).slideToggle( 300 )
             } )
         }
 
