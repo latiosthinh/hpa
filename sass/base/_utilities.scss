@@ -35,3 +35,13 @@
 		transform: translateY(10px);
 	}
 }
+
+@mixin set-line($line, $lineHeight){
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: $line;
+	-webkit-box-orient: vertical;
+	line-height: $lineHeight;
+	height: calc(#{$lineHeight} * #{$line});
+}
