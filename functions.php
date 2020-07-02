@@ -102,6 +102,7 @@ function hpa_scripts() {
 	wp_enqueue_script( 'gsap', JS. '/gsap.js', [], _S_VERSION, true );
 	wp_enqueue_script( 'hpa-navigation', JS. '/navigation.js', [], _S_VERSION, true );
 	wp_enqueue_script( 'slick', JS . '/slick.js', ['jquery'], _S_VERSION, true );
+	wp_enqueue_script( 'select2', JS . '/select2.js', ['jquery'], _S_VERSION, true );
 	wp_enqueue_script( 'hpa-skip-link-focus-fix', JS . '/skip-link-focus-fix.js', ['jquery'], _S_VERSION, true );
 	wp_enqueue_script( 'hpa-script', JS . '/script.js', ['jquery'], _S_VERSION, true );
 

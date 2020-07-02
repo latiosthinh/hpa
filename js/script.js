@@ -102,5 +102,9 @@
                 $this.siblings( 'p' ).slideToggle( 300 )
             } )
         }
+
+        if ( $( '.projects' ).length !== 0 ) {
+            $( 'select' ).select2({})
+        }
     } )
 } )( jQuery )
