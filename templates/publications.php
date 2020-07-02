@@ -11,7 +11,7 @@ get_header();
 		<?php 
 		$args = [
 			'post_type'      => 'post',
-			'posts_per_page' => 8
+			'posts_per_page' => -1,
 		];
 
 		$projects = new WP_Query($args);

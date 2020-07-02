@@ -20,12 +20,12 @@
 
         $( '.heading' ).each( function() {
             $( this ).removeClass( 'active' ).css( 'width', $( this ).attr( 'data-width' ) );
-            $( this ).children().removeClass( 'active' )
+            $( this ).children().removeClass( 'active' ).addClass( 'non-active' )
         } )
 
 
         setTimeout(() => {
-            $this.addClass( 'active' )
+            $this.addClass( 'active' ).removeClass( 'non-active' );
             $this.parent().addClass( 'active' )
             $this.parent().css( 'width', $this.attr( 'data-max-width' ) );
 
@@ -35,7 +35,9 @@
 
     $( '.heading' ).on( 'mouseleave', function() {
         $( this ).removeClass( 'active' ).css( 'width', $( this ).attr( 'data-width' ) );
-        $( this ).children().removeClass( 'active' )
+        $( this ).children().removeClass( 'active' ).removeClass( 'non-active' )
+
+        $( '.heading-expand' ).removeClass( 'non-active' )
     } )
 
     var slider = function() {

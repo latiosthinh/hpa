@@ -40,7 +40,7 @@
 			<div class="heading" data-width="55px">
 				<span class="heading-expand p" data-max-width="420px">P</span>
 				<div>
-					<a class="link-to-project" href="<?php echo home_url( '/projects' ) ?>">rojects / Dự án</a>
+					<a class="link-to-projects" href="<?php echo home_url( '/projects' ) ?>">rojects / Dự án</a>
 					<a class="link-to-publications" href="<?php echo home_url( '/publications' ) ?>">uplications / Ấn phẩm</a>
 				</div>
 			</div>
@@ -48,8 +48,8 @@
 			<div class="heading" data-width="66px">
 				<span class="heading-expand a" data-max-width="980px">A</span>
 				<div>
-					<a class="link-to-architect-people" href="<?php echo home_url( '/peoples-life' ) ?>">rchitecture for people’s life / Kiến trúc vị dân sinh</a>
-					<a class="link-to-architect-foundation" href="<?php echo home_url( '/asr' ) ?>">rchitecture & social responsibility Foundation / Quỹ ASR</a>
+					<a class="link-to-architect-people" href="<?php echo home_url( '/people' ) ?>">rchitecture for people’s life / Kiến trúc vị dân sinh</a>
+					<a class="link-to-architect-foundation" href="<?php echo home_url( '/asr-projects' ) ?>">rchitecture & social responsibility Foundation / Quỹ ASR</a>
 				</div>
 			</div>
 

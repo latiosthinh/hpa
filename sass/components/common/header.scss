@@ -77,6 +77,10 @@
 		&.active, &:hover {
 			color: $green;
 		}
+
+		&.non-active {
+			color: #000000 !important;
+		}
 	}
 
 	a {

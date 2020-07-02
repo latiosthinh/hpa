@@ -29,9 +29,11 @@ get_header();
 						$args = [
 							'post_type' => 'asr',
 							'tax_query' => [
-								'taxonomy' => 'asr-category',
-								'field'    => 'slug',
-								'terms'    => [ 'y-te-giao-duc' ],
+								[
+									'taxonomy' => 'asr-category',
+									'field'    => 'slug',
+									'terms'    => 'y-te-giao-duc',
+								]
 							]
 						];
 
@@ -55,11 +57,14 @@ get_header();
 						<h3>Nhà ở mô-đun</h3>
 						<?php
 						$args = [
-							'post_type' => 'asr',
-							'tax_query' => [
-								'taxonomy' => 'asr-category',
-								'field'    => 'slug',
-								'terms'    => [ 'nha-o-mo-dun' ],
+							'post_type'      => 'asr',
+							'posts_per_page' => -1,
+							'tax_query'      => [
+								[
+									'taxonomy' => 'asr-category',
+									'field'    => 'slug',
+									'terms'    => 'nha-o-mo-dun',
+								]
 							]
 						];
 

@@ -26,7 +26,7 @@ get_header();
 						[
 							'taxonomy' => 'afpl-category',
 							'field'    => 'slug',
-							'terms'    => [ 'y-te-giao-duc' ],
+							'terms'    => 'y-te-giao-duc',
 						]
 					]
 				];
@@ -56,7 +56,7 @@ get_header();
 						[
 							'taxonomy' => 'afpl-category',
 							'field'    => 'slug',
-							'terms'    => [ 'nha-o-mo-dun' ],
+							'terms'    => 'nha-o-mo-dun',
 						]
 					]
 				];
@@ -82,11 +82,12 @@ get_header();
 				<?php
 				$args = [
 					'post_type'      => 'afpl',
+					'posts_per_page' => -1,
 					'tax_query' => [
 						[
 							'taxonomy' => 'afpl-category',
 							'field'    => 'slug',
-							'terms'    => [ 'kg-than-thien' ],
+							'terms'    => 'kg-than-thien',
 						]
 					]
 				];
