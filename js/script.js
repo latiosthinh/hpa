@@ -6,11 +6,11 @@
         
         TweenLite.fromTo( '.loading h1', 1, { alpha: 0, delay:1 }, { alpha: 1, delay:2 })
 
-        $( '.loading' ).on( 'click', function() {
+        $( '.loading img, .loading h1' ).on( 'click', function() {
             TweenLite.to( '.loading', 0.5, { alpha: 0 })
 
             setTimeout(() => {
-                $( this ).remove()
+                $( '.loading' ).remove()
             }, 500);
         } )
     }
