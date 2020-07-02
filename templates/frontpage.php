@@ -6,34 +6,22 @@ get_header();
 ?>
 
 <section class="loading">
-    <img src="<?= IMG . '/logo.jpg' ?>" alt="H&P Architect">
+	<img src="<?= IMG . '/logo.jpg' ?>" alt="H&P Architect">
 
-    <h1>H&P Architects</h1>
+	<h1>H&P Architects</h1>
 </section>
 
 <section class="banner">
-    <div class="banner-slider">
-        <?php
-        $args = [
-            'post_type'      => 'post',
-            'category_name'  => 'projects',
-            'posts_per_page' => 5
-        ];
+	<div class="banner-slider">
+		<?php
+		$images = rwmb_meta( 'banner', array( 'size' => 'thumbnail' ) );
+		foreach ( $images as $image ) :
+		?>
 
-        $projects = new WP_Query($args);
+		<img src="<?= $image['full_url'] ?>" />
 
-        if ( $projects->have_posts() ) :
-            while ( $projects->have_posts() ) :
-                $projects->the_post();
-        ?>
-            <div class="item">
-                <?php the_post_thumbnail( 'full' ) ?>
-            </div>
-        <?php
-            endwhile;
-        endif;
-        ?>
-    </div>
+		<?php endforeach; ?>
+	</div>
 </section>
 
 <?php
