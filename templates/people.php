@@ -15,8 +15,10 @@ get_header();
 			</div>
 		</div>
 		
-		<h2 class="txt-center">Essential spaces/không gian thiết yếu</h2>
 		<div class="row">
+			<div class="col-md-12 pad-0">
+				<h2 class="txt-center">Essential spaces/không gian thiết yếu</h2>
+			</div>
 			<div class="col-md-4">
 				<h3 class="txt-center">Y tế - giáo dục</h3>
 				<?php

@@ -2016,12 +2016,12 @@ a {
 }
 
 .site-socials li:nth-child(2) {
-	top: 21px;
+	top: 24px;
 }
 
 .site-socials li:nth-child(3) {
-	right: -1px;
-	top: 43px;
+	right: 0;
+	top: 46px;
 }
 
 .site-socials a {
@@ -2030,16 +2030,24 @@ a {
 	transition: .3s;
 }
 
-.site-socials a:hover {
-	color: #429627;
+.site-socials a:hover svg {
+	fill: #429627;
 }
 
-.site-socials .fa-facebook-square {
-	border-radius: 5px;
-	overflow: hidden;
-	font-size: 20px;
-	height: 19px;
-	width: 17px;
+.site-socials svg {
+	transition: .3s;
+}
+
+.site-socials .fac svg {
+	width: 18px;
+}
+
+.site-socials .ins svg {
+	width: 18px;
+}
+
+.site-socials .you svg {
+	width: 23px;
 }
 
 footer {
@@ -2720,6 +2728,29 @@ footer ion-icon {
 	display: block;
 	margin-bottom: 30px;
 	width: 100%;
+}
+
+@media all and (min-width: 1919px) {
+	.people > .container {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.people > .container .pad-0 {
+		padding: 15px;
+	}
+	.people > .container > .row {
+		flex: 0 0 75%;
+	}
+	.people > .container > .row:first-child {
+		flex: 0 0 25%;
+		padding-right: 15px;
+	}
+	.people > .container > .row:first-child div.txt-center {
+		margin-top: 67px;
+		text-align: left;
+		max-width: 100%;
+		flex: 0 0 100%;
+	}
 }
 
 .page-template-ars .link-to-architect-foundation, .page-template-ars .a {

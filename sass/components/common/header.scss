@@ -106,12 +106,12 @@
 		right: 1px;
 
 		&:nth-child(2) {
-			top: 21px;
+			top: 24px;
 		}
 
 		&:nth-child(3) {
-			right: -1px;
-			top: 43px;
+			right: 0;
+			top: 46px;
 		}
 	}
 
@@ -121,15 +121,31 @@
 		transition: .3s;
 
 		&:hover {
-			color: $green;
+			svg {
+				fill: $green;
+			}
 		}
 	}
 
-	.fa-facebook-square {
-		border-radius: 5px;
-		overflow: hidden;
-		font-size: 20px;
-		height: 19px;
-		width: 17px;
+	svg {
+		transition: .3s;
+	}
+
+	.fac {
+		svg {
+			width: 18px;
+		}
+	}
+
+	.ins {
+		svg {
+			width: 18px;
+		}
+	}
+
+	.you {
+		svg {
+			width: 23px;
+		}
 	}
 }

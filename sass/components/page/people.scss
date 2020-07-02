@@ -26,3 +26,32 @@
 		width: 100%;
 	}
 }
+
+@media all and (min-width:1919px) {
+	.people {
+		> .container {
+			display: flex;
+			flex-wrap: wrap;
+
+			.pad-0 {
+				padding: 15px;
+			}
+
+			> .row {
+				flex: 0 0 75%;
+
+				&:first-child {
+					flex: 0 0 25%;
+					padding-right: 15px;
+
+					div.txt-center {
+						margin-top: 67px;
+						text-align: left;
+						max-width: 100%;
+						flex: 0 0 100%;
+					}
+				}
+			}
+		}
+	}
+}
