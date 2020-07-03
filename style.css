@@ -1082,6 +1082,13 @@ main {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	z-index: 0;
+	white-space: nowrap;
+}
+
+@media all and (max-width: 991px) {
+	.site:after {
+		font-size: 32px;
+	}
 }
 
 ul,
@@ -1930,12 +1937,18 @@ a {
 	margin-bottom: 83px;
 }
 
+@media all and (max-width: 991px) {
+	.site-header {
+		padding: 30px 0 0 6px;
+		margin-bottom: 40px;
+	}
+}
+
 .home .site-header {
 	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
-	padding: 30px 0 0 41px;
 	background: rgba(255, 255, 255, 0);
 }
 
@@ -2010,6 +2023,12 @@ a {
 	position: absolute;
 	top: 44px;
 	right: 48px;
+}
+
+@media all and (max-width: 991px) {
+	.site-socials {
+		right: 15px;
+	}
 }
 
 .site-socials li {
@@ -2199,8 +2218,20 @@ footer ion-icon {
 	left: 49px;
 }
 
+@media all and (max-width: 991px) {
+	.banner .slick-arrow.prev {
+		left: 15px;
+	}
+}
+
 .banner .slick-arrow.next {
 	right: 48px;
+}
+
+@media all and (max-width: 991px) {
+	.banner .slick-arrow.next {
+		right: 15px;
+	}
 }
 
 .page-template-about .heading-expand.h {
@@ -2218,6 +2249,12 @@ footer ion-icon {
 .about {
 	position: relative;
 	z-index: 3;
+}
+
+@media all and (max-width: 991px) {
+	.about .col-md-5:nth-child(2) {
+		margin-top: -35px;
+	}
 }
 
 .about .item {
@@ -2246,18 +2283,32 @@ footer ion-icon {
 	width: 11px;
 }
 
-.about h2:hover, .about h2.active {
+.about h2.active {
 	color: #429627;
 }
 
-.about h2:hover i, .about h2.active i {
+.about h2.active i {
 	right: -24px;
 	top: 10px;
 	transform: translateY(-50%) rotate(0);
 }
 
-.about h2:hover i svg, .about h2.active i svg {
+.about h2.active i svg {
 	fill: #429627;
+}
+
+@media all and (min-width: 992px) {
+	.about h2:hover {
+		color: #429627;
+	}
+	.about h2:hover i {
+		right: -24px;
+		top: 10px;
+		transform: translateY(-50%) rotate(0);
+	}
+	.about h2:hover i svg {
+		fill: #429627;
+	}
 }
 
 .about .content {
@@ -2408,6 +2459,16 @@ footer ion-icon {
 	color: #429627;
 }
 
+@media all and (max-width: 991px) {
+	.projects-filter > .col-md-3 {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	.projects-filter .facetwp-facet {
+		margin-bottom: 0;
+	}
+}
+
 .facetwp-template {
 	width: 100%;
 	display: flex;
@@ -2503,18 +2564,21 @@ footer ion-icon {
 	border-width: 5px 5px 0 5px;
 }
 
-.select2-container--default .select2-search--dropdown--below {
-	border: 1px solid #000 !important;
-}
-
 .select2-container--default .select2-search--dropdown .select2-search__field {
 	border: 1px solid #000 !important;
 	border-radius: 0;
 }
 
+.select2-container--open .select2-dropdown--below {
+	border: 1px solid #000;
+	border-top: 0;
+	border-radius: 0 !important;
+}
+
 .select2-container--default .select2-results__option--selected {
 	background-color: #429627 !important;
 	color: #ffffff;
+	padding: 6px 10px;
 }
 
 .pagination {
@@ -2759,6 +2823,12 @@ footer ion-icon {
 	width: 100%;
 }
 
+@media all and (max-width: 991px) {
+	.page-template-people p {
+		text-align: justify;
+	}
+}
+
 @media all and (min-width: 1919px) {
 	.people > .container {
 		display: flex;
@@ -2780,6 +2850,12 @@ footer ion-icon {
 		text-align: left;
 		max-width: 100%;
 		flex: 0 0 100%;
+	}
+}
+
+@media all and (max-width: 991px) {
+	.page-template-ars .pad-0 {
+		padding: 15px;
 	}
 }
 

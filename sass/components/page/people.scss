@@ -29,6 +29,12 @@
 		margin-bottom: 30px;
 		width: 100%;
 	}
+
+	p {
+		@media all and (max-width: 991px) {
+			text-align: justify;
+		}
+	}
 }
 
 @media all and (min-width:1919px) {

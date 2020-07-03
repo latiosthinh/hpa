@@ -17,6 +17,14 @@
 	position: relative;
 	z-index: 3;
 
+	.col-md-5 {
+		&:nth-child(2) {
+			@media all and (max-width: 991px) {
+				margin-top: -35px;
+			}
+		}
+	}
+
 	.item {
 		margin-bottom: 40px;
 	}
@@ -42,7 +50,7 @@
 			}
 		}
 
-		&:hover, &.active {
+		&.active {
 			color: $green;
 
 			i {
@@ -52,6 +60,22 @@
 
 				svg {
 					fill: $green;
+				}
+			}
+		}
+
+		@media all and (min-width: 992px) {
+			&:hover {
+				color: $green;
+	
+				i {
+					right: -24px;
+					top: 10px;
+					transform: translateY(-50%) rotate(0);
+	
+					svg {
+						fill: $green;
+					}
 				}
 			}
 		}

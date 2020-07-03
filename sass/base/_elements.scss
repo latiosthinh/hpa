@@ -36,6 +36,11 @@ main {
 		left: 50%;
 		transform: translate(-50%, -50%);
 		z-index: 0;
+		white-space: nowrap;
+
+		@media all and (max-width: 991px) {
+			font-size: 32px;
+		}
 	}
 }
 

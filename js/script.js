@@ -1,5 +1,7 @@
 ( function( $ ) {
 
+	const $win = $( window );
+
 	if ( $( 'body' ).hasClass( 'home' ) ) {
 		// svg
 		TweenLite.fromTo( '.loading img', 1, { alpha: 0, scale: 5, delay:1 }, { alpha: 1, scale: 1, delay:1 }, )
@@ -15,6 +17,8 @@
 			}, 500);
 		} )
 	}
+
+	let flag = 0;
 
 	$( '.heading-expand' ).on( 'mouseenter', function() {
 		let $this = $( this )
@@ -32,6 +36,17 @@
 
 			$this.siblings( 'div' ).addClass( 'active' )
 		}, 0);
+
+		flag += 1;
+
+		if ( $win.width() < 992 ) {
+			if ( flag%2==0 ) {
+				$( this ).removeClass( 'active' ).css( 'width', $( this ).attr( 'data-width' ) );
+				$( this ).children().removeClass( 'active' ).removeClass( 'non-active' )
+
+				$( '.heading-expand' ).removeClass( 'non-active' )
+			}
+		}
 	} )
 
 	$( '.heading' ).on( 'mouseleave', function() {

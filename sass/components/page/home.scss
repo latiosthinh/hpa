@@ -85,10 +85,18 @@
 
         &.prev {
             left: 49px;
+
+            @media all and (max-width: 991px) {
+                left: 15px;
+            }
         }
 
         &.next {
             right: 48px;
+
+            @media all and (max-width: 991px) {
+                right: 15px;
+            }
         }
     }
 }
