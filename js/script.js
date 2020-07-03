@@ -11,6 +11,7 @@
 
 			setTimeout(() => {
 				$( '.loading' ).remove()
+				$( '.site-header' ).css( 'z-index', '20' );
 			}, 500);
 		} )
 	}

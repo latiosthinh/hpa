@@ -22,10 +22,13 @@
 		margin: 30px 0;
 	}
 
+	.content-single__text {
+		margin: 0 auto;
+	}
+
 	.description-project {
 		margin: 90px auto 170px;
 		padding: 0 50px 50px;
-		background: #000000;
 
 		h3 {
 			font-size: 30px;
@@ -36,7 +39,7 @@
 			text-transform: uppercase;
 			font-size: 18px;
 			padding-top: 15px;
-			border-top: 1px solid $grey;
+			border-top: 1px solid $green;
 
 			&:first-child {
 				border-top: 0;

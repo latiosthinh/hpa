@@ -36,6 +36,10 @@
 			top: 15px;
 			transform: translateY(-50%) rotate(-90deg);
 			transform-origin: center;
+
+			svg {
+				width: 11px;
+			}
 		}
 
 		&:hover, &.active {
@@ -45,6 +49,10 @@
 				right: -24px;
 				top: 10px;
 				transform: translateY(-50%) rotate(0);
+
+				svg {
+					fill: $green;
+				}
 			}
 		}
 	}

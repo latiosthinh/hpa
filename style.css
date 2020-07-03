@@ -1935,7 +1935,6 @@ a {
 	top: 0;
 	left: 0;
 	right: 0;
-	z-index: 20;
 	padding: 30px 0 0 41px;
 	background: rgba(255, 255, 255, 0);
 }
@@ -2123,7 +2122,7 @@ footer ion-icon {
 	left: 0;
 	right: 0;
 	background: #fff;
-	z-index: 25;
+	z-index: 99;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -2243,6 +2242,10 @@ footer ion-icon {
 	transform-origin: center;
 }
 
+.about h2 i svg {
+	width: 11px;
+}
+
 .about h2:hover, .about h2.active {
 	color: #429627;
 }
@@ -2251,6 +2254,10 @@ footer ion-icon {
 	right: -24px;
 	top: 10px;
 	transform: translateY(-50%) rotate(0);
+}
+
+.about h2:hover i svg, .about h2.active i svg {
+	fill: #429627;
 }
 
 .about .content {
@@ -2494,6 +2501,20 @@ footer ion-icon {
 #projects .select2-container--default .select2-selection--single .select2-selection__arrow b {
 	border-color: #000 transparent transparent transparent;
 	border-width: 5px 5px 0 5px;
+}
+
+.select2-container--default .select2-search--dropdown--below {
+	border: 1px solid #000 !important;
+}
+
+.select2-container--default .select2-search--dropdown .select2-search__field {
+	border: 1px solid #000 !important;
+	border-radius: 0;
+}
+
+.select2-container--default .select2-results__option--selected {
+	background-color: #429627 !important;
+	color: #ffffff;
 }
 
 .pagination {
@@ -2825,10 +2846,13 @@ footer ion-icon {
 	margin: 30px 0;
 }
 
+.single .content-single__text {
+	margin: 0 auto;
+}
+
 .single .description-project {
 	margin: 90px auto 170px;
 	padding: 0 50px 50px;
-	background: #000000;
 }
 
 .single .description-project h3 {
@@ -2840,7 +2864,7 @@ footer ion-icon {
 	text-transform: uppercase;
 	font-size: 18px;
 	padding-top: 15px;
-	border-top: 1px solid #666;
+	border-top: 1px solid #429627;
 }
 
 .single .description-project h4:first-child {

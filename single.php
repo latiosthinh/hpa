@@ -18,8 +18,9 @@ get_header();
 
 	<?php the_post_thumbnail( 'full' ) ?>
 	
-	<?php the_content(); ?>
-	
+	<div class="col-md-8 content-single__text">
+		<?php the_content(); ?>
+	</div>
 	<?php if ( rwmb_meta( 'location' ) || rwmb_meta( 'client' ) || rwmb_meta( 'area' ) || rwmb_meta( 'status' ) ) : ?>
 	<div class="col-md-6 description-project">
 		<div class="row">

@@ -102,7 +102,23 @@
 			}
 		}
 	}
+}
 
+.select2-container--default .select2-search--dropdown {
+
+	&--below {
+		border: 1px solid #000 !important;
+	}
+
+	.select2-search__field {
+		border: 1px solid #000 !important;
+		border-radius: 0;
+	}
+}
+
+.select2-container--default .select2-results__option--selected {
+	background-color: $green !important;
+	color: #ffffff;
 }
 
 .pagination {
