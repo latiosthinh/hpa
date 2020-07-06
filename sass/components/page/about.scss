@@ -82,7 +82,10 @@
 	}
 
 	.content {
-		word-wrap: anywhere;
 		display: none;
+
+		@media all and (min-width: 992px) {
+			word-wrap: anywhere;
+		}
 	}
 }

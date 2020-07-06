@@ -18,43 +18,56 @@
 		} )
 	}
 
-	let flag = 0;
+	
+	if ( $win.width() > 992 ) {
+		$( '.heading-expand' ).on( 'mouseenter', function() {
+			let $this = $( this )
 
-	$( '.heading-expand' ).on( 'mouseenter', function() {
-		let $this = $( this )
+			
+			$( '.heading' ).each( function() {
+				$( this ).removeClass( 'active' ).css( 'width', $( this ).attr( 'data-width' ) );
+				$( this ).children().removeClass( 'active' ).addClass( 'non-active' )
+			} )
 
-		$( '.heading' ).each( function() {
-			$( this ).removeClass( 'active' ).css( 'width', $( this ).attr( 'data-width' ) );
-			$( this ).children().removeClass( 'active' ).addClass( 'non-active' )
+			setTimeout(() => {
+				$this.addClass( 'active' ).removeClass( 'non-active' );
+				$this.parent().addClass( 'active' )
+				$this.parent().css( 'width', $this.attr( 'data-max-width' ) );
+
+				$this.siblings( 'div' ).addClass( 'active' )
+			}, 0);
+			
 		} )
 
+		$( '.heading' ).on( 'mouseleave', function() {
+			$( this ).removeClass( 'active' ).css( 'width', $( this ).attr( 'data-width' ) );
+			$( this ).children().removeClass( 'active' ).removeClass( 'non-active' )
 
-		setTimeout(() => {
-			$this.addClass( 'active' ).removeClass( 'non-active' );
-			$this.parent().addClass( 'active' )
-			$this.parent().css( 'width', $this.attr( 'data-max-width' ) );
+			$( '.heading-expand' ).removeClass( 'non-active' )
+		} )
+	}
+	else {
+		$( '.heading-expand' ).on( 'click', function() {
+			let $this = $( this )
 
-			$this.siblings( 'div' ).addClass( 'active' )
-		}, 0);
+			$( '.mb-overlay' ).addClass( 'm-active' )
 
-		flag += 1;
+			$( '.heading-expand' ).removeClass( 'm-active' )
+			$this.addClass( 'm-active' )
 
-		if ( $win.width() < 992 ) {
-			if ( flag%2==0 ) {
-				$( this ).removeClass( 'active' ).css( 'width', $( this ).attr( 'data-width' ) );
-				$( this ).children().removeClass( 'active' ).removeClass( 'non-active' )
+			$( '.heading div' ).removeClass( 'm-active' )
+			$this.next( 'div' ).addClass( 'm-active' )
 
-				$( '.heading-expand' ).removeClass( 'non-active' )
-			}
-		}
-	} )
+			$( '.heading' ).each( function() {
+				$( this ).children().addClass( 'non-active' )
+				$this.removeClass( 'non-active' );
+			} )
+		} )
 
-	$( '.heading' ).on( 'mouseleave', function() {
-		$( this ).removeClass( 'active' ).css( 'width', $( this ).attr( 'data-width' ) );
-		$( this ).children().removeClass( 'active' ).removeClass( 'non-active' )
-
-		$( '.heading-expand' ).removeClass( 'non-active' )
-	} )
+		$( '.mb-overlay button' ).on( 'click', function() {
+			$( '.heading div, .heading-expand, .mb-overlay' ).removeClass( 'm-active' )
+		} )
+	}
 
 	var slider = function() {
 		if ( $('.banner-slider').length !== 0 ) {

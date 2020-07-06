@@ -78,6 +78,10 @@
 			</li>
 		</ul>
 
+		<div class="mb-overlay">
+			<button>&times;</button>
+		</div>
+
 	</header>
 
 	<main>

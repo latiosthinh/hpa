@@ -21,6 +21,10 @@ body {
 main {
 	position: relative;
 	z-index: 2;
+
+	@media all and (max-width: 991px) {
+		padding: 30px 0;
+	}
 }
 
 .site {

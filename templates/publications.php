@@ -30,6 +30,8 @@ get_header();
 				</div>
 
 				<a class="item-readmore" href="<?php the_permalink() ?>">+</a>
+
+				<a href="<?php the_permalink() ?>" class="item-link"></a>
 			</div>
 		<?php 
 			endwhile;
