@@ -2378,6 +2378,14 @@ footer ion-icon {
 	transition: .3s;
 }
 
+.about h2:after {
+	content: '';
+	position: absolute;
+	display: block;
+	width: 150%;
+	height: 100%;
+}
+
 .about h2 i {
 	position: absolute;
 	right: -20px;
@@ -2419,7 +2427,9 @@ footer ion-icon {
 }
 
 .about .content {
-	display: none;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
 }
 
 @media all and (min-width: 992px) {
