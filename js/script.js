@@ -106,7 +106,6 @@
 			for ( i = 0; i < acc.length; i++ ) {
 				acc[i].addEventListener( 'click' , function() {
 					count += 1;
-					console.log(i)
 
 					for (j = 0; j < panels.length; j++) {
 						if ( j !== i ) {
