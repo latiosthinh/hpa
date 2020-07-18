@@ -30,6 +30,10 @@ get_header();
 				</div>
 
 				<a class="item-readmore" href="<?php the_permalink() ?>">+</a>
+<<<<<<< HEAD
+=======
+
+>>>>>>> fcff12c0646af2f8f3ab0ad9880b9a486b90e76a
 				<a href="<?php the_permalink() ?>" class="item-link"></a>
 			</div>
 		<?php 

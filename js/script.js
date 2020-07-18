@@ -100,6 +100,7 @@
 					for ( let j = 0; j < panels.length; j++) {
 						if ( j != i ) {
 							acc[j].classList.remove( 'active' );
+							panels[j].classList.remove( 'active' )
 							panels[j].style.maxHeight = null;
 						}
 						else {
@@ -108,9 +109,9 @@
 								panel.classList.add( 'active' )
 								panel.style.maxHeight = panel.scrollHeight + "px";
 							} else {
-								panel.style.maxHeight = null;
 								panel.classList.remove( 'active' )
 								$this.classList.remove( 'active' )
+								panel.style.maxHeight = null;
 							}
 						}
 					}

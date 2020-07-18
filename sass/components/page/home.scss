@@ -6,7 +6,7 @@
         left: 0;
         right: 0;
         background: #fff;
-        z-index: 25;
+        z-index: 99;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -87,10 +87,18 @@
 
         &.prev {
             left: 49px;
+
+            @media all and (max-width: 991px) {
+                left: 15px;
+            }
         }
 
         &.next {
             right: 48px;
+
+            @media all and (max-width: 991px) {
+                right: 15px;
+            }
         }
     }
 }

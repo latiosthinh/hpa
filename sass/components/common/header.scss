@@ -31,9 +31,8 @@
 		top: 0;
 		left: 0;
 		right: 0;
-		z-index: 20;
-		padding: 30px 0 0 41px;
 		background: rgba( #fff, 0 );
+		z-index: 30;
 
 		@media all and (max-width: 991px) {
 			bottom: 0;
@@ -45,6 +44,10 @@
 			background: #ffffff;
 			box-shadow: 0 -4px 6px 1px rgba(0, 0, 0, 0.05);
 		}
+	}
+
+	main {
+		padding: 0;
 	}
 }
 

@@ -1967,9 +1967,8 @@ a {
 	top: 0;
 	left: 0;
 	right: 0;
-	z-index: 20;
-	padding: 30px 0 0 41px;
 	background: rgba(255, 255, 255, 0);
+	z-index: 30;
 }
 
 @media all and (max-width: 991px) {
@@ -1983,6 +1982,10 @@ a {
 		background: #ffffff;
 		box-shadow: 0 -4px 6px 1px rgba(0, 0, 0, 0.05);
 	}
+}
+
+.page-template-home main {
+	padding: 0;
 }
 
 .site-branding {
@@ -2265,7 +2268,7 @@ footer ion-icon {
 	left: 0;
 	right: 0;
 	background: #fff;
-	z-index: 25;
+	z-index: 99;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -2346,8 +2349,20 @@ footer ion-icon {
 	left: 49px;
 }
 
+@media all and (max-width: 991px) {
+	.banner .slick-arrow.prev {
+		left: 15px;
+	}
+}
+
 .banner .slick-arrow.next {
 	right: 48px;
+}
+
+@media all and (max-width: 991px) {
+	.banner .slick-arrow.next {
+		right: 15px;
+	}
 }
 
 @media all and (max-width: 991px) {
@@ -2374,6 +2389,12 @@ footer ion-icon {
 .about {
 	position: relative;
 	z-index: 3;
+}
+
+@media all and (max-width: 991px) {
+	.about .col-md-5:nth-child(2) {
+		margin-top: -35px;
+	}
 }
 
 .about .item {
@@ -2422,6 +2443,20 @@ footer ion-icon {
 
 .about h2.active i svg {
 	fill: #429627;
+}
+
+@media all and (min-width: 992px) {
+	.about h2:hover {
+		color: #429627;
+	}
+	.about h2:hover i {
+		right: -24px;
+		top: 10px;
+		transform: translateY(-50%) rotate(0);
+	}
+	.about h2:hover i svg {
+		fill: #429627;
+	}
 }
 
 .about .content {
@@ -2608,6 +2643,16 @@ footer ion-icon {
 	color: #429627;
 }
 
+@media all and (max-width: 991px) {
+	.projects-filter > .col-md-3 {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	.projects-filter .facetwp-facet {
+		margin-bottom: 0;
+	}
+}
+
 .facetwp-template {
 	width: 100%;
 	display: flex;
@@ -2729,6 +2774,23 @@ footer ion-icon {
 #projects .select2-container--default .select2-selection--single .select2-selection__arrow b {
 	border-color: #000 transparent transparent transparent;
 	border-width: 5px 5px 0 5px;
+}
+
+.select2-container--default .select2-search--dropdown .select2-search__field {
+	border: 1px solid #000 !important;
+	border-radius: 0;
+}
+
+.select2-container--open .select2-dropdown--below {
+	border: 1px solid #000;
+	border-top: 0;
+	border-radius: 0 !important;
+}
+
+.select2-container--default .select2-results__option--selected {
+	background-color: #429627 !important;
+	color: #ffffff;
+	padding: 6px 10px;
 }
 
 .pagination {
@@ -2980,7 +3042,11 @@ footer ion-icon {
 	margin-bottom: 20px;
 }
 
-.page-template-people h2 + div {
+.page-template-people .col-md-10 {
+	margin: 0 auto 80px;
+}
+
+.page-template-people .mar-80 {
 	margin: 0 auto 80px;
 }
 
@@ -3024,6 +3090,12 @@ footer ion-icon {
 	}
 }
 
+@media all and (max-width: 991px) {
+	.page-template-ars .pad-0 {
+		padding: 15px;
+	}
+}
+
 .page-template-ars .link-to-architect-foundation, .page-template-ars .a {
 	color: #429627;
 }
@@ -3049,6 +3121,12 @@ footer ion-icon {
 .page-template-ars .col-left h2 {
 	text-align: left;
 	margin: 42px 0 15px;
+}
+
+@media all and (max-width: 991px) {
+	.page-template-ars .col-left h2 {
+		margin-top: 0;
+	}
 }
 
 .page-template-ars .col-left h2 + p {
@@ -3115,6 +3193,16 @@ footer ion-icon {
 
 .single p {
 	margin: 30px 0;
+}
+
+.single .content-single__text {
+	margin: 0 auto;
+}
+
+@media all and (max-width: 991px) {
+	.single .content-single__text {
+		padding: 0;
+	}
 }
 
 .single .description-project h3 {
