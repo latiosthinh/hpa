@@ -9,22 +9,22 @@ get_header();
 	<div class="container pad-0">
 		<div class="row">
 			<div class="col-md-5 col-left">
-				<h2>Out vision / Tầm nhìn</h2>
+				<h2 class="txt-uppercase">Out vision / Tầm nhìn</h2>
 				<?= rwmb_meta( 'vision' ) ?>
 
-				<h2>Leadership / Con người</h2>
+				<h2 class="txt-uppercase">Leadership / Con người</h2>
 				<?= rwmb_meta( 'leadership' ) ?>
 
-				<h2>Donate / Ủng hộ</h2>
+				<h2 class="txt-uppercase">Donate / Ủng hộ</h2>
 				<?= rwmb_meta( 'donate' ) ?>
 			</div>
 
 			<div class="col-md-6">
-				<h2>ASR Projects / Dự án ASR</h2>
+				<h2 class="txt-uppercase">ASR Projects / Dự án ASR</h2>
 
 				<div class="row">
 					<div class="col-md-6">
-						<h3>Y tế - giáo dục</h3>
+						<h3 class="txt-uppercase">Y tế - giáo dục</h3>
 						<?php
 						$args = [
 							'post_type' => 'asr',
@@ -54,7 +54,7 @@ get_header();
 					</div>
 
 					<div class="col-md-6">
-						<h3>Nhà ở mô-đun</h3>
+						<h3 class="txt-uppercase">Nhà ở mô-đun</h3>
 						<?php
 						$args = [
 							'post_type'      => 'asr',

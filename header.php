@@ -32,7 +32,7 @@
 			<div class="heading" data-width="66px">
 				<span class="heading-expand h" data-max-width="330px">H</span>
 				<div>
-					<a class="link-to-home" href="<?php echo home_url() ?>">ome / Trang chủ</a>
+					<a class="link-to-home" href="<?php echo home_url( '/home' ) ?>">ome / Trang chủ</a>
 					<a class="link-to-about" href="<?php echo home_url( '/about' ) ?>">&P Architects</a>
 				</div>
 			</div>
@@ -77,6 +77,10 @@
 				</a>
 			</li>
 		</ul>
+
+		<div class="mb-overlay">
+			<button>&times;</button>
+		</div>
 
 	</header>
 

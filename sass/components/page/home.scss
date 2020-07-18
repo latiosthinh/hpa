@@ -1,8 +1,4 @@
 .home {
-    .link-to-home, .h {
-        color: $green;
-    }
-    
     .loading {
         position: fixed;
         top: 0;
@@ -32,6 +28,12 @@
         }
     }
     
+}
+
+.page-template-home {
+    .link-to-home, .h {
+        color: $green;
+    }
 }
 
 .banner {
@@ -89,6 +91,18 @@
 
         &.next {
             right: 48px;
+        }
+    }
+}
+
+@media all and (max-width: 991px) {
+	.banner .slick-arrow {
+        &.prev {
+            left: 15px;
+        }
+        
+        &.next {
+            right: 15px;
         }
     }
 }

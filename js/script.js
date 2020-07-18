@@ -1,44 +1,64 @@
 ( function( $ ) {
 
+	const $win = $( window );
+
 	if ( $( 'body' ).hasClass( 'home' ) ) {
 		// svg
 		TweenLite.fromTo( '.loading img', 1, { alpha: 0, scale: 5, delay:1 }, { alpha: 1, scale: 1, delay:1 }, )
 		
 		TweenLite.fromTo( '.loading h1', 1, { alpha: 0, delay:1 }, { alpha: 1, delay:2 })
-
-		$( '.loading img, .loading h1' ).on( 'click', function() {
-			TweenLite.to( '.loading', 0.5, { alpha: 0 })
-
-			setTimeout(() => {
-				$( '.loading' ).remove()
-			}, 500);
-		} )
 	}
 
-	$( '.heading-expand' ).on( 'mouseenter', function() {
-		let $this = $( this )
+	
+	if ( $win.width() > 992 ) {
+		$( '.heading-expand' ).on( 'mouseenter', function() {
+			let $this = $( this )
 
-		$( '.heading' ).each( function() {
-			$( this ).removeClass( 'active' ).css( 'width', $( this ).attr( 'data-width' ) );
-			$( this ).children().removeClass( 'active' ).addClass( 'non-active' )
+			
+			$( '.heading' ).each( function() {
+				$( this ).removeClass( 'active' ).css( 'width', $( this ).attr( 'data-width' ) );
+				$( this ).children().removeClass( 'active' ).addClass( 'non-active' )
+			} )
+
+			setTimeout(() => {
+				$this.addClass( 'active' ).removeClass( 'non-active' );
+				$this.parent().addClass( 'active' )
+				$this.parent().css( 'width', $this.attr( 'data-max-width' ) );
+
+				$this.siblings( 'div' ).addClass( 'active' )
+			}, 0);
+			
 		} )
 
+		$( '.heading' ).on( 'mouseleave', function() {
+			$( this ).removeClass( 'active' ).css( 'width', $( this ).attr( 'data-width' ) );
+			$( this ).children().removeClass( 'active' ).removeClass( 'non-active' )
 
-		setTimeout(() => {
-			$this.addClass( 'active' ).removeClass( 'non-active' );
-			$this.parent().addClass( 'active' )
-			$this.parent().css( 'width', $this.attr( 'data-max-width' ) );
+			$( '.heading-expand' ).removeClass( 'non-active' )
+		} )
+	}
+	else {
+		$( '.heading-expand' ).on( 'click', function() {
+			let $this = $( this )
 
-			$this.siblings( 'div' ).addClass( 'active' )
-		}, 0);
-	} )
+			$( '.mb-overlay' ).addClass( 'm-active' )
 
-	$( '.heading' ).on( 'mouseleave', function() {
-		$( this ).removeClass( 'active' ).css( 'width', $( this ).attr( 'data-width' ) );
-		$( this ).children().removeClass( 'active' ).removeClass( 'non-active' )
+			$( '.heading-expand' ).removeClass( 'm-active' )
+			$this.addClass( 'm-active' )
 
-		$( '.heading-expand' ).removeClass( 'non-active' )
-	} )
+			$( '.heading div' ).removeClass( 'm-active' )
+			$this.next( 'div' ).addClass( 'm-active' )
+
+			$( '.heading' ).each( function() {
+				$( this ).children().addClass( 'non-active' )
+				$this.removeClass( 'non-active' );
+			} )
+		} )
+
+		$( '.mb-overlay button' ).on( 'click', function() {
+			$( '.heading div, .heading-expand, .mb-overlay' ).removeClass( 'm-active' )
+		} )
+	}
 
 	var slider = function() {
 		if ( $('.banner-slider').length !== 0 ) {
@@ -57,39 +77,6 @@
 				touchThreshold: 100
 			})
 		}
-
-		if ( $( '.awards-timeline__slider' ).length !== 0 ) {
-			$('.awards-timeline__slider').slick({
-				// autoplay: true,
-				// autoplaySpeed: 3000,
-				draggable: true,
-				arrows: false,
-				// prevArrow: '<span class="prev"><ion-icon name="arrow-back"></ion-icon></span>',
-				// nextArrow: '<span class="next"><ion-icon name="arrow-forward"></ion-icon></span>',
-				centerMode: true,
-				centerPadding: '500px',
-				slidesToShow: 1,
-				dots: false,
-				speed: 900,
-				infinite: false,
-				cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
-				touchThreshold: 100,
-				responsive: [
-					{
-						breakpoint: 1700,
-						settings: {
-							centerPadding: '400px',
-						}
-					},
-					{
-						breakpoint: 1440,
-						settings: {
-							centerPadding: '250px',
-						}
-					},
-				]
-			})
-		}
 	}
 
 	$( document ).on( 'ready', function () {
@@ -101,17 +88,34 @@
 		} )
 
 		if ( $( '.about' ).length !== 0 ) {
-			let count = 0;
 
-			$( '.item h2' ).on( 'click', function () {
-				count += 1;
-				let $this = $( this );
+			const acc = document.querySelectorAll( '.item h2' );
+			const panels = document.querySelectorAll( '.item .content' );
 
-				$( '.item h2' ).removeClass( 'active' )
+			for ( let i = 0; i < acc.length; i++ ) {
+				acc[i].addEventListener( 'click' , function() {
+					let panel = this.nextElementSibling;
+					let $this = this;
 
-				count%2 == 0 ? $this.removeClass( 'active' ) : $this.addClass( 'active' )
-				$this.siblings( '.content' ).slideToggle( 300 )
-			} )
+					for ( let j = 0; j < panels.length; j++) {
+						if ( j != i ) {
+							acc[j].classList.remove( 'active' );
+							panels[j].style.maxHeight = null;
+						}
+						else {
+							if ( ! panel.classList.contains( 'active' ) ) {
+								$this.classList.add( 'active' )
+								panel.classList.add( 'active' )
+								panel.style.maxHeight = panel.scrollHeight + "px";
+							} else {
+								panel.style.maxHeight = null;
+								panel.classList.remove( 'active' )
+								$this.classList.remove( 'active' )
+							}
+						}
+					}
+				});
+			}
 		}
 
 		if ( $( '.projects' ).length !== 0 ) {

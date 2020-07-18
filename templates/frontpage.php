@@ -1,27 +1,30 @@
 <?php
 /**
- * Template name: Home
+ * \Template Name: Frontpage
  */
-get_header();
+
 ?>
+<!doctype html>
+<html <?php language_attributes(); ?>>
+<head>
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<!-- <script src="https://kit.fontawesome.com/be9a4f74a7.js" crossorigin="anonymous"></script> -->
+
+	<?php wp_head(); ?>
+</head>
+
+<body <?php body_class(); ?>>
+<?php wp_body_open(); ?>
+<div id="page" class="site">
 
 <section class="loading">
-	<img src="<?= IMG . '/logo.jpg' ?>" alt="H&P Architect">
-
-	<h1>H&P Architects</h1>
-</section>
-
-<section class="banner">
-	<div class="banner-slider">
-		<?php
-		$images = rwmb_meta( 'banner', array( 'size' => 'thumbnail' ) );
-		foreach ( $images as $image ) :
-		?>
-
-		<img src="<?= $image['full_url'] ?>" />
-
-		<?php endforeach; ?>
-	</div>
+	<a href="<?php echo home_url( '/home' ); ?>">
+		<img src="<?= IMG . '/logo.jpg' ?>" alt="H&P Architect">
+		<h1>H&P Architects</h1>
+	</a>
 </section>
 
 <?php

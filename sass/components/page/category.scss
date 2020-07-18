@@ -1,10 +1,12 @@
-.page-template-projects {
+.page-template-projects,
+.single-project {
 	.link-to-projects, .p {
 		color: $green;
 	}
 }
 
-.page-template-publications {
+.page-template-publications,
+.single-post {
 	.link-to-publications, .p {
 		color: $green;
 	}
@@ -16,6 +18,16 @@
 	flex-wrap: wrap;
 }
 
+@media all and (max-width: 991px) {
+	.projects-filter > .col-md-3 {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	.projects-filter .facetwp-facet {
+		margin-bottom: 0;
+	}
+}
+
 #projects {
 
 	margin-bottom: 100px;
@@ -23,15 +35,17 @@
 	.item {
 		position: relative;
 		display: flex;
+		
+		@media all and (min-width: 991px) {
+			&:hover {
+				.item-readmore {
+					opacity: 1;
+				}
 
-		&:hover {
-			.item-readmore {
-				opacity: 1;
-			}
-
-			.item-content,
-			&:after {
-				opacity: 0;
+				.item-content,
+				&:after {
+					opacity: 0;
+				}
 			}
 		}
 
@@ -80,6 +94,23 @@
 	.select2-container {
 		width: 100% !important;
 		margin-bottom: 10px;
+	}
+
+	.select2-container--default .select2-search--dropdown .select2-search__field {
+		border: 1px solid #000 !important;
+		border-radius: 0;
+	}
+	
+	.select2-container--open .select2-dropdown--below {
+		border: 1px solid #000;
+		border-top: 0;
+		border-radius: 0 !important;
+	}
+	
+	.select2-container--default .select2-results__option--selected {
+		background-color: #429627 !important;
+		color: #ffffff;
+		padding: 6px 10px;
 	}
 
 	.select2-container--default .select2-selection--single {
@@ -133,17 +164,23 @@
 	margin-top: 45px;
 	margin-bottom: 100px;
 
+	@media all and (max-width: 991px) {
+		margin-top: 0;
+	}
+
 	.item {
 		position: relative;
 
-		&:hover {
-			.item-readmore {
-				opacity: 1;
-			}
+		@media all and (min-width: 992px) {
+			&:hover {
+				.item-readmore {
+					opacity: 1;
+				}
 
-			.item-content,
-			&:after {
-				opacity: 0;
+				.item-content,
+				&:after {
+					opacity: 0;
+				}
 			}
 		}
 
@@ -197,4 +234,14 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 	opacity: 0;
+}
+
+.item-link {
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 3;
 }
